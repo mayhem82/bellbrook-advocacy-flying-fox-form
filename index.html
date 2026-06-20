@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bellbrook Flying-Fox Community Impact Form</title>
+  <style>
+    :root{--green:#064e3b;--green2:#065f46;--amber:#f59e0b;--stone:#292524;--muted:#57534e;--bg:#f5f5f4;--line:#d6d3d1;--white:#fff}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--stone);line-height:1.5}
+    header{background:var(--green);color:#fff;padding:22px 16px;border-bottom:5px solid var(--amber)}
+    .wrap{max-width:980px;margin:0 auto} h1{font-size:clamp(1.45rem,4vw,2.4rem);margin:0 0 6px;font-weight:900;letter-spacing:-.02em} h2{font-size:1.25rem;margin:0 0 12px} p{margin:0 0 12px}.sub{color:#d1fae5;font-size:.95rem}.notice{background:#fffbeb;border:1px solid #fbbf24;color:#78350f;border-radius:14px;padding:14px;margin:18px 0 0;font-weight:650}
+    main{padding:22px 16px 44px}.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:20px;margin:18px 0;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+    label{display:block;font-weight:800;margin:14px 0 6px}.hint{font-size:.86rem;color:var(--muted);margin-top:4px} input,select,textarea{width:100%;padding:12px 13px;border:1px solid #a8a29e;border-radius:12px;background:#fff;font:inherit} textarea{min-height:118px}.grid{display:grid;grid-template-columns:1fr;gap:14px}@media(min-width:720px){.grid.two{grid-template-columns:1fr 1fr}.grid.three{grid-template-columns:1fr 1fr 1fr}}
+    .checks{display:grid;grid-template-columns:1fr;gap:9px;margin-top:8px}@media(min-width:720px){.checks{grid-template-columns:1fr 1fr}}.check{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#fafaf9}.check input{width:auto;margin-right:8px}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.btn{border:0;border-radius:12px;padding:12px 15px;font-weight:900;cursor:pointer}.primary{background:var(--green2);color:#fff}.secondary{background:#e7e5e4;color:#1c1917}.danger{background:#fee2e2;color:#7f1d1d}.btn:focus,input:focus,textarea:focus,select:focus{outline:3px solid #fbbf24;outline-offset:2px}
+    pre{white-space:pre-wrap;background:#1c1917;color:#f5f5f4;border-radius:14px;padding:16px;max-height:420px;overflow:auto;font-size:.86rem}.small{font-size:.88rem;color:var(--muted)} footer{padding:28px 16px;background:#1c1917;color:#d6d3d1;text-align:center;font-size:.88rem}.required{color:#b91c1c;font-weight:900}.ok{background:#ecfdf5;border:1px solid #10b981;color:#064e3b;border-radius:12px;padding:10px;margin-top:10px;display:none}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.pill{background:#064e3b;color:#fff;border:1px solid #047857;border-radius:999px;padding:8px 11px;font-size:.84rem;font-weight:800}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Bellbrook Flying-Fox Community Impact Form</h1>
+    <p class="sub">Standalone online form for recording community impacts, lived experience, requested action, and consent preferences.</p>
+    <div class="tabs"><span class="pill">Community record</span><span class="pill">Plain text export</span><span class="pill">Print ready</span><span class="pill">Local draft save</span></div>
+    <div class="notice">This form does not automatically send information anywhere. It creates a structured record you can copy, print, or export as a text file.</div>
+  </div>
+</header>
+<main class="wrap">
+<form id="impactForm">
+  <section class="card">
+    <h2>1. About You</h2>
+    <div class="grid two">
+      <div><label for="name">Name <span class="small">optional</span></label><input id="name" name="name" autocomplete="name" placeholder="Leave blank for anonymous"></div>
+      <div><label for="contact">Contact information <span class="small">optional</span></label><input id="contact" name="contact" placeholder="Phone or email, if you want follow-up"></div>
+    </div>
+    <div class="grid two">
+      <div><label for="area">Street or area of Bellbrook</label><input id="area" name="area" placeholder="e.g. Main Street, near the park, north end"></div>
+      <div><label for="years">How long have you lived, worked, or visited here?</label><input id="years" name="years" placeholder="e.g. 5 years, all my life, regular visitor"></div>
+    </div>
+    <label for="relationship">How do you live or connect here? <span class="required">*</span></label>
+    <select id="relationship" name="relationship" required>
+      <option value="">Select one</option><option>I own my home</option><option>I rent</option><option>I live on a property outside the town centre</option><option>I am a business owner / operator</option><option>I work in Bellbrook but live elsewhere</option><option>I visit Bellbrook regularly</option><option>Other</option>
+    </select>
+  </section>
+
+  <section class="card">
+    <h2>2. Impact Duration</h2>
+    <div class="grid two">
+      <div><label for="firstNoticed">When did you first notice the flying-fox impact?</label><input id="firstNoticed" name="firstNoticed" placeholder="e.g. 2019, summer 2022, after school holidays"></div>
+      <div><label for="frequency">How often are you affected?</label><select id="frequency" name="frequency"><option value="">Select one</option><option>Daily</option><option>Most days</option><option>Weekly</option><option>During peak periods</option><option>Occasionally</option></select></div>
+    </div>
+    <label>What types of impact have occurred?</label>
+    <div class="checks">
+      <label class="check"><input type="checkbox" name="impacts" value="Noise">Noise</label>
+      <label class="check"><input type="checkbox" name="impacts" value="Smell / odour">Smell / odour</label>
+      <label class="check"><input type="checkbox" name="impacts" value="Droppings on property, vehicles, washing, or public areas">Droppings on property, vehicles, washing, or public areas</label>
+      <label class="check"><input type="checkbox" name="impacts" value="Loss of use of park or public space">Loss of use of park or public space</label>
+      <label class="check"><input type="checkbox" name="impacts" value="Water tank or roof concern">Water tank or roof concern</label>
+      <label class="check"><input type="checkbox" name="impacts" value="Business or visitor impact">Business or visitor impact</label>
+      <label class="check"><input type="checkbox" name="impacts" value="Health or wellbeing concern">Health or wellbeing concern</label>
+      <label class="check"><input type="checkbox" name="impacts" value="Other">Other</label>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>3. Physical, Health, Property, or Financial Impact</h2>
+    <label for="physicalImpact">Describe any physical, health, property, cleaning, access, or financial impact.</label>
+    <textarea id="physicalImpact" name="physicalImpact" placeholder="Describe what happened, when it happens, what it costs, and what you have had to change."></textarea>
+    <label for="evidence">Evidence available</label>
+    <textarea id="evidence" name="evidence" placeholder="List photos, videos, receipts, cleaning costs, dates, correspondence, screenshots, or witnesses. Do not upload here; attach separately when handing in or emailing."></textarea>
+  </section>
+
+  <section class="card">
+    <h2>4. Lived Experience</h2>
+    <label for="experience">In your own words, explain how this has affected daily life.</label>
+    <textarea id="experience" name="experience" placeholder="Use plain language. Specific dates, repeated patterns, and practical effects are useful."></textarea>
+    <label for="attemptedActions">Have you reported this, asked for help, or changed your behaviour because of it?</label>
+    <textarea id="attemptedActions" name="attemptedActions" placeholder="Who was contacted, when, what response was received, and what remains unresolved?"></textarea>
+  </section>
+
+  <section class="card">
+    <h2>5. Requested Action and Consent</h2>
+    <label for="requestedAction">What action do you want taken?</label>
+    <textarea id="requestedAction" name="requestedAction" placeholder="e.g. formal management plan, public reporting, risk controls, relocation/mitigation options, cleaning support, transparent council response."></textarea>
+    <label for="consent">Consent preference <span class="required">*</span></label>
+    <select id="consent" name="consent" required>
+      <option value="">Select one</option>
+      <option>Use my record anonymously only</option>
+      <option>Use my name internally but not publicly</option>
+      <option>Use my name in formal advocacy material</option>
+      <option>Contact me before any use beyond this collection</option>
+    </select>
+    <div class="actions">
+      <button class="btn primary" type="submit">Update Preview</button>
+      <button class="btn secondary" type="button" id="copyBtn">Copy Record</button>
+      <button class="btn secondary" type="button" id="exportBtn">Export TXT</button>
+      <button class="btn secondary" type="button" onclick="window.print()">Print</button>
+      <button class="btn danger" type="button" id="clearBtn">Clear Draft</button>
+    </div>
+    <div id="status" class="ok">Draft saved in this browser.</div>
+  </section>
+</form>
+<section class="card">
+  <h2>Live Form Submission Preview</h2>
+  <p class="small">This is the structured record generated from the form. Review it before copying, printing, or exporting.</p>
+  <pre id="preview">Complete the form to generate a record.</pre>
+</section>
+</main>
+<footer>
+  <div class="wrap">© Bellbrook Flying-Fox Community Record. Static GitHub Pages form. No server-side submission or automatic upload is active.</div>
+</footer>
+<script>
+const form=document.getElementById('impactForm'); const preview=document.getElementById('preview'); const statusBox=document.getElementById('status');
+const fields=[...form.querySelectorAll('input,select,textarea')];
+function values(){const fd=new FormData(form); const impacts=fd.getAll('impacts'); return {
+  name:fd.get('name')||'Anonymous / not provided', contact:fd.get('contact')||'Not provided', area:fd.get('area')||'Not provided', years:fd.get('years')||'Not provided', relationship:fd.get('relationship')||'Not selected', firstNoticed:fd.get('firstNoticed')||'Not provided', frequency:fd.get('frequency')||'Not selected', impacts:impacts.length?impacts.join(', '):'None selected', physicalImpact:fd.get('physicalImpact')||'Not provided', evidence:fd.get('evidence')||'Not provided', experience:fd.get('experience')||'Not provided', attemptedActions:fd.get('attemptedActions')||'Not provided', requestedAction:fd.get('requestedAction')||'Not provided', consent:fd.get('consent')||'Not selected'} }
+function record(){const v=values(); const date=new Date().toLocaleString('en-AU'); return `BELLBROOK FLYING-FOX COMMUNITY IMPACT RECORD\nGenerated: ${date}\n\n1. ABOUT THE PERSON\nName: ${v.name}\nContact: ${v.contact}\nArea: ${v.area}\nConnection to Bellbrook: ${v.relationship}\nTime connected to Bellbrook: ${v.years}\n\n2. IMPACT DURATION\nFirst noticed: ${v.firstNoticed}\nFrequency: ${v.frequency}\nImpact types: ${v.impacts}\n\n3. PHYSICAL / HEALTH / PROPERTY / FINANCIAL IMPACT\n${v.physicalImpact}\n\n4. EVIDENCE AVAILABLE\n${v.evidence}\n\n5. LIVED EXPERIENCE\n${v.experience}\n\n6. REPORTING / ATTEMPTED ACTIONS\n${v.attemptedActions}\n\n7. REQUESTED ACTION\n${v.requestedAction}\n\n8. CONSENT\n${v.consent}\n`; }
+function update(){preview.textContent=record(); localStorage.setItem('bellbrookFlyingFoxDraft', JSON.stringify(Object.fromEntries(new FormData(form)))); const checked=[...form.querySelectorAll('input[type=checkbox]:checked')].map(x=>x.value); localStorage.setItem('bellbrookFlyingFoxImpacts', JSON.stringify(checked)); statusBox.style.display='block'; clearTimeout(window.__s); window.__s=setTimeout(()=>statusBox.style.display='none',1400)}
+function load(){try{const saved=JSON.parse(localStorage.getItem('bellbrookFlyingFoxDraft')||'{}'); Object.entries(saved).forEach(([k,v])=>{const el=form.elements[k]; if(el && el.type!=='checkbox') el.value=v}); const checks=JSON.parse(localStorage.getItem('bellbrookFlyingFoxImpacts')||'[]'); form.querySelectorAll('input[type=checkbox]').forEach(c=>c.checked=checks.includes(c.value));}catch(e){} preview.textContent=record();}
+form.addEventListener('submit',e=>{e.preventDefault(); update();}); fields.forEach(el=>el.addEventListener('input',update));
+document.getElementById('copyBtn').onclick=async()=>{await navigator.clipboard.writeText(record()); statusBox.textContent='Record copied to clipboard.'; statusBox.style.display='block'};
+document.getElementById('exportBtn').onclick=()=>{const blob=new Blob([record()],{type:'text/plain'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='bellbrook-flying-fox-community-impact-record.txt'; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(a.href),500)};
+document.getElementById('clearBtn').onclick=()=>{if(confirm('Clear this draft from the browser?')){localStorage.removeItem('bellbrookFlyingFoxDraft'); localStorage.removeItem('bellbrookFlyingFoxImpacts'); form.reset(); preview.textContent=record();}};
+load();
+</script>
+</body>
+</html>

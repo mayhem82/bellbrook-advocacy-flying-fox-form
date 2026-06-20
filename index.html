@@ -21,8 +21,8 @@
   <div class="wrap">
     <h1>Bellbrook Flying-Fox Community Impact Form</h1>
     <p class="sub">Standalone online form for recording community impacts, lived experience, requested action, and consent preferences.</p>
-    <div class="tabs"><span class="pill">Community record</span><span class="pill">Plain text export</span><span class="pill">Print ready</span><span class="pill">Local draft save</span></div>
-    <div class="notice">This form does not automatically send information anywhere. It creates a structured record you can copy, print, or export as a text file.</div>
+    <div class="tabs"><span class="pill">Community record</span><span class="pill">Email draft</span><span class="pill">Plain text export</span><span class="pill">Print ready</span><span class="pill">Local draft save</span></div>
+    <div class="notice">Submit opens the user's email app with the completed record addressed to bellbrookadvocacyportal@gmail.com. Copy, print, and TXT export remain available as backup.</div>
   </div>
 </header>
 <main class="wrap">
@@ -67,7 +67,7 @@
     <label for="physicalImpact">Describe any physical, health, property, cleaning, access, or financial impact.</label>
     <textarea id="physicalImpact" name="physicalImpact" placeholder="Describe what happened, when it happens, what it costs, and what you have had to change."></textarea>
     <label for="evidence">Evidence available</label>
-    <textarea id="evidence" name="evidence" placeholder="List photos, videos, receipts, cleaning costs, dates, correspondence, screenshots, or witnesses. Do not upload here; attach separately when handing in or emailing."></textarea>
+    <textarea id="evidence" name="evidence" placeholder="List photos, videos, receipts, cleaning costs, dates, correspondence, screenshots, or witnesses. Attach files separately if needed."></textarea>
   </section>
 
   <section class="card">
@@ -91,7 +91,7 @@
       <option>Contact me before any use beyond this collection</option>
     </select>
     <div class="actions">
-      <button class="btn primary" type="submit">Update Preview</button>
+      <button class="btn primary" type="submit">Open Email to Submit</button>
       <button class="btn secondary" type="button" id="copyBtn">Copy Record</button>
       <button class="btn secondary" type="button" id="exportBtn">Export TXT</button>
       <button class="btn secondary" type="button" onclick="window.print()">Print</button>
@@ -102,22 +102,23 @@
 </form>
 <section class="card">
   <h2>Live Form Submission Preview</h2>
-  <p class="small">This is the structured record generated from the form. Review it before copying, printing, or exporting.</p>
+  <p class="small">This is the structured record generated from the form. Review it before submitting, copying, printing, or exporting.</p>
   <pre id="preview">Complete the form to generate a record.</pre>
 </section>
 </main>
 <footer>
-  <div class="wrap">© Bellbrook Flying-Fox Community Record. Static GitHub Pages form. No server-side submission or automatic upload is active.</div>
+  <div class="wrap">© Bellbrook Flying-Fox Community Record. Static GitHub Pages form. Email submission opens the user's own email app.</div>
 </footer>
 <script>
+const DEST='bellbrookadvocacyportal@gmail.com';
 const form=document.getElementById('impactForm'); const preview=document.getElementById('preview'); const statusBox=document.getElementById('status');
 const fields=[...form.querySelectorAll('input,select,textarea')];
 function values(){const fd=new FormData(form); const impacts=fd.getAll('impacts'); return {
   name:fd.get('name')||'Anonymous / not provided', contact:fd.get('contact')||'Not provided', area:fd.get('area')||'Not provided', years:fd.get('years')||'Not provided', relationship:fd.get('relationship')||'Not selected', firstNoticed:fd.get('firstNoticed')||'Not provided', frequency:fd.get('frequency')||'Not selected', impacts:impacts.length?impacts.join(', '):'None selected', physicalImpact:fd.get('physicalImpact')||'Not provided', evidence:fd.get('evidence')||'Not provided', experience:fd.get('experience')||'Not provided', attemptedActions:fd.get('attemptedActions')||'Not provided', requestedAction:fd.get('requestedAction')||'Not provided', consent:fd.get('consent')||'Not selected'} }
 function record(){const v=values(); const date=new Date().toLocaleString('en-AU'); return `BELLBROOK FLYING-FOX COMMUNITY IMPACT RECORD\nGenerated: ${date}\n\n1. ABOUT THE PERSON\nName: ${v.name}\nContact: ${v.contact}\nArea: ${v.area}\nConnection to Bellbrook: ${v.relationship}\nTime connected to Bellbrook: ${v.years}\n\n2. IMPACT DURATION\nFirst noticed: ${v.firstNoticed}\nFrequency: ${v.frequency}\nImpact types: ${v.impacts}\n\n3. PHYSICAL / HEALTH / PROPERTY / FINANCIAL IMPACT\n${v.physicalImpact}\n\n4. EVIDENCE AVAILABLE\n${v.evidence}\n\n5. LIVED EXPERIENCE\n${v.experience}\n\n6. REPORTING / ATTEMPTED ACTIONS\n${v.attemptedActions}\n\n7. REQUESTED ACTION\n${v.requestedAction}\n\n8. CONSENT\n${v.consent}\n`; }
-function update(){preview.textContent=record(); localStorage.setItem('bellbrookFlyingFoxDraft', JSON.stringify(Object.fromEntries(new FormData(form)))); const checked=[...form.querySelectorAll('input[type=checkbox]:checked')].map(x=>x.value); localStorage.setItem('bellbrookFlyingFoxImpacts', JSON.stringify(checked)); statusBox.style.display='block'; clearTimeout(window.__s); window.__s=setTimeout(()=>statusBox.style.display='none',1400)}
+function update(){preview.textContent=record(); localStorage.setItem('bellbrookFlyingFoxDraft', JSON.stringify(Object.fromEntries(new FormData(form)))); const checked=[...form.querySelectorAll('input[type=checkbox]:checked')].map(x=>x.value); localStorage.setItem('bellbrookFlyingFoxImpacts', JSON.stringify(checked)); statusBox.textContent='Draft saved in this browser.'; statusBox.style.display='block'; clearTimeout(window.__s); window.__s=setTimeout(()=>statusBox.style.display='none',1400)}
 function load(){try{const saved=JSON.parse(localStorage.getItem('bellbrookFlyingFoxDraft')||'{}'); Object.entries(saved).forEach(([k,v])=>{const el=form.elements[k]; if(el && el.type!=='checkbox') el.value=v}); const checks=JSON.parse(localStorage.getItem('bellbrookFlyingFoxImpacts')||'[]'); form.querySelectorAll('input[type=checkbox]').forEach(c=>c.checked=checks.includes(c.value));}catch(e){} preview.textContent=record();}
-form.addEventListener('submit',e=>{e.preventDefault(); update();}); fields.forEach(el=>el.addEventListener('input',update));
+form.addEventListener('submit',e=>{e.preventDefault(); const subject=encodeURIComponent('Bellbrook Flying-Fox Community Impact Record'); const body=encodeURIComponent(record()); window.location.href='mailto:'+DEST+'?subject='+subject+'&body='+body;}); fields.forEach(el=>el.addEventListener('input',update));
 document.getElementById('copyBtn').onclick=async()=>{await navigator.clipboard.writeText(record()); statusBox.textContent='Record copied to clipboard.'; statusBox.style.display='block'};
 document.getElementById('exportBtn').onclick=()=>{const blob=new Blob([record()],{type:'text/plain'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='bellbrook-flying-fox-community-impact-record.txt'; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(a.href),500)};
 document.getElementById('clearBtn').onclick=()=>{if(confirm('Clear this draft from the browser?')){localStorage.removeItem('bellbrookFlyingFoxDraft'); localStorage.removeItem('bellbrookFlyingFoxImpacts'); form.reset(); preview.textContent=record();}};

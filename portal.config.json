@@ -1,0 +1,111 @@
+{
+  "engineName": "Community Evidence Portal Engine",
+  "projectKey": "bellbrook-flying-fox",
+  "portalTitle": "BELLBROOK ADVOCACY PORTAL",
+  "portalSubtitle": "Community Voice • 2026 Initiative",
+  "issueName": "Bellbrook Flying Fox Colony",
+  "locationName": "Bellbrook",
+  "archiveEmail": "bellbrookadvocacyportal@gmail.com",
+  "factsPage": {
+    "heroTitle": "BEFORE YOU FILL IN THE FORM",
+    "heroText": "What is actually happening with the flying foxes in Bellbrook.",
+    "primaryButton": "START COMMUNITY RECORD",
+    "summary": "Bellbrook residents can use this portal to preserve their own account as evidence."
+  },
+  "record": {
+    "title": "BELLBROOK COMMUNITY IMPACT RECORD",
+    "ownershipLine": "The contents remain the account and observations of the resident.",
+    "preparedUsing": "Bellbrook Advocacy Portal"
+  },
+  "recipientTypes": [
+    "Council / General Manager",
+    "Mayor / Councillors",
+    "Member for Oxley",
+    "NSW DCCEEW / NSW Environment",
+    "NSW Health",
+    "NSW Ombudsman",
+    "Media / Community Advocacy"
+  ],
+  "recipientDirectory": [
+    {
+      "name": "Kempsey Shire Council",
+      "role": "Local management, infrastructure and council records",
+      "contact": "Use council website contact page"
+    },
+    {
+      "name": "General Manager",
+      "role": "Administrative handling and council record keeping",
+      "contact": "Mark attention: General Manager"
+    },
+    {
+      "name": "Mayor / Councillors",
+      "role": "Local representation and decision-making",
+      "contact": "Use current councillor contact list"
+    },
+    {
+      "name": "Member for Oxley",
+      "role": "Constituent representation and state-level contact",
+      "contact": "Use NSW Parliament member contact page"
+    },
+    {
+      "name": "NSW DCCEEW / NSW Environment",
+      "role": "Flying fox and environmental management framework",
+      "contact": "Use NSW Environment contact page"
+    },
+    {
+      "name": "NSW Health",
+      "role": "Health, sleep, odour and exposure concerns",
+      "contact": "Use NSW Health contact page"
+    },
+    {
+      "name": "NSW Ombudsman",
+      "role": "Administrative process history and record preservation",
+      "contact": "Use NSW Ombudsman contact page"
+    },
+    {
+      "name": "Media / Community Advocacy",
+      "role": "Community testimony and public-interest documentation",
+      "contact": "Use trusted contacts only"
+    }
+  ],
+  "impactCategories": {
+    "physical": [
+      "Droppings on house, car, or outdoor furniture",
+      "Droppings contaminating garden, vegetables, or fruit trees",
+      "Droppings on children's play equipment",
+      "Noise preventing sleep or rest",
+      "Smell affecting ability to use outdoor areas",
+      "Pets or animals distressed",
+      "Damage to trees or plants"
+    ],
+    "health": [
+      "Stress or anxiety",
+      "Sleep disruption",
+      "Concern about disease risk",
+      "Mental health impacts — feeling helpless, ignored, or exhausted"
+    ],
+    "financial": [
+      "Cleaning costs",
+      "Protective covers or property modification costs",
+      "Loss of business income",
+      "Reduced property use or enjoyment"
+    ],
+    "community": [
+      "Unable to use outdoor community spaces",
+      "Local events affected",
+      "Visitors reluctant to come to Bellbrook",
+      "Children affected"
+    ]
+  },
+  "requestedActions": [
+    "A formal Bellbrook Flying-fox Camp Management Plan",
+    "Transparent public reporting and updates",
+    "Clear risk controls for residents and public areas",
+    "Cleaning or mitigation support",
+    "Public hard infrastructure modifications",
+    "Low-impact weed clearing",
+    "Active buffer zones and boundary controls",
+    "Lawful relocation or dispersal options assessed",
+    "Bellbrook treated with the same seriousness as other locations"
+  ]
+}

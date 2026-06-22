@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bellbrook Recipient Intelligence Demo</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#f5f2eb;color:#1f1b16;margin:0;line-height:1.55}.wrap{max-width:850px;margin:auto;padding:24px}.card{background:#fff;border:1px solid #ddd6ca;border-radius:20px;padding:22px;margin:0 0 18px}select,button{width:100%;padding:13px;border-radius:12px;font:inherit}pre{white-space:pre-wrap;background:#1c1917;color:#f5f5f4;border-radius:16px;padding:16px}.btn{font-weight:900;background:#087a59;color:white;border:0;margin-top:10px}
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="card">
+<h1>Bellbrook Recipient Intelligence Demo</h1>
+<p>This page tests the recipient guidance module before it is wired into the main portal.</p>
+<label for="recipientType"><strong>Recipient package type</strong></label>
+<select id="recipientType" onchange="update()">
+<option value="council">Council / General Manager</option>
+<option value="councillor">Mayor / Councillors</option>
+<option value="mp">Member for Oxley</option>
+<option value="environment">NSW DCCEEW / NSW Environment</option>
+<option value="health">NSW Health</option>
+<option value="oversight">NSW Ombudsman</option>
+<option value="media">Media / Community Advocacy</option>
+</select>
+<button class="btn" onclick="downloadPackage()">Download Demo Package</button>
+</section>
+<section class="card">
+<h2>2. Cover Letter Placeholder</h2>
+<pre id="coverPreview"></pre>
+</section>
+</main>
+<script>
+function selectedType(){let e=document.getElementById('recipientType');return e?e.value:'council'}
+function selectedLabel(){let e=document.getElementById('recipientType');return e?e.options[e.selectedIndex].text:'Council / General Manager'}
+function record(){return 'BELLBROOK FLYING FOX COMMUNITY IMPACT RECORD\n\nDemo resident account placeholder. In the live portal this is replaced by resident-authored testimony.'}
+function coverLetter(){return 'Subject: Bellbrook Flying Fox Community Impact Record\n\nTo: '+selectedLabel()+'\n\nAttached is my Bellbrook Flying Fox Community Impact Record.\n\nThis record is my account. Portal-generated material is separate and may be edited or removed before sending.'}
+function update(){document.getElementById('coverPreview').textContent=coverLetter()}
+function downloadPackage(){const text=coverLetter()+'\n\n================ COMMUNITY IMPACT RECORD ================\n\n'+record();const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/plain'}));a.download='bellbrook-recipient-intelligence-demo.txt';a.click()}
+update();
+</script>
+<script src="recipient-intelligence.js"></script>
+</body>
+</html>

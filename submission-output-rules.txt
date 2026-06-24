@@ -2,17 +2,32 @@ Resident submission output rule:
 
 The Bellbrook Flying Fox Community Impact Record must read as a first-person resident submission.
 
-Use:
+Use first person for generated framing:
 - I report
 - I have experienced
 - I have contacted
 - I am asking for
 - I give permission
 
-Do not use:
+Do not use third person in the resident submission:
 - The resident reports
 - The resident requests
 - The resident has experienced
+
+Resident-typed account fields must remain verbatim.
+
+Do not rewrite resident-written text.
+Do not summarise resident-written text.
+Do not clean up tone, grammar, spelling, wording, or structure.
+Do not convert resident-written text into third person.
+Do not paraphrase lived experience.
+
+The portal may only:
+- place the resident's exact words under headings
+- add labels around the account
+- list selected checkbox impacts
+- add a short portal note at the bottom
+- generate a cover letter separately
 
 Portal metadata belongs at the bottom as a short note.
 

@@ -25,7 +25,7 @@
 <section class="card step" data-step="3"><div class="kicker">Screen 3 of 4 • Sections 5 & 6</div><h2>Help Sought + Desired Solutions</h2><label class="q">Who have you contacted?</label><div class="opts" data-name="contacted" data-type="checkbox" data-options="Kempsey Shire Council|A councillor directly|Michael Kemp MP|NSW DCCEEW|NSW Health|I have not contacted anyone"></div><label class="q">If you contacted someone, what happened?</label><textarea name="authorityOutcome"></textarea><label class="q">Preferred actions</label><div class="opts" data-name="requested" data-type="checkbox" data-options="A formal Bellbrook Flying-fox Camp Management Plan|Transparent public reporting and updates|Clear risk controls for residents and public areas|Cleaning or mitigation support|Public hard infrastructure modifications|Low-impact weed clearing|Active buffer zones and boundary controls|Lawful relocation or dispersal options assessed|Bellbrook treated with the same seriousness as other locations"></div><label class="q">Additional requests or explanations</label><textarea name="customRequests"></textarea><div class="actions"><button type="button" class="btn" onclick="backStep()">Back</button><button type="button" class="btn primary" onclick="nextStep()">Next Step</button></div></section>
 <section class="card step" data-step="4"><div class="kicker">Screen 4 of 4 • Sections 7 & 8</div><h2>Permissions + Final Remarks</h2><label class="q">Permission to use your account</label><div class="opts" data-name="permission" data-type="radio" data-options="Yes — use my account with my name and location|Yes — use my account without my name|Yes — use summary form only|Contact me before use beyond this collection|No — information purposes only"></div><label class="q">Contact details (optional)</label><input type="text" name="contact"><label class="q">Anything else</label><textarea name="anythingElse"></textarea><div class="actions"><button type="button" class="btn" onclick="backStep()">Back</button><button type="button" class="btn primary" onclick="finish()">Generate Evidence Package</button></div></section>
 </form><section class="card" id="live"><h2>Live Bellbrook Flying Fox Community Impact Record Preview</h2><p>This preview is for checking only. Print and download options appear after the evidence package is generated.</p><pre id="preview"></pre></section>
-<section class="hide" id="done"><article class="card"><h2>Your Bellbrook Flying Fox Community Impact Record Is Complete</h2><p>This record is your account. It remains your account. You decide whether it is shared and who receives it.</p><label class="q">Cover letter recipient type</label><select id="recipientType" onchange="update()"><option value="council">Council / General Manager</option><option value="councillor">Mayor / Councillors</option><option value="mp">Member for Oxley</option><option value="environment">NSW DCCEEW / NSW Environment</option><option value="health">NSW Health</option><option value="oversight">NSW Ombudsman</option><option value="media">Media / Community Advocacy</option></select><button class="btn primary" onclick="downloadRecord()">Download Bellbrook Flying Fox Community Impact Record</button><button class="btn" onclick="downloadCoverLetter()">Download Cover Letter</button><button class="btn" onclick="downloadPackage()">Download Submission Package</button><button class="btn" onclick="window.print()">Print This Page</button><button class="btn" onclick="emailIt()">Optional: Submit Account To Investigation Archive</button><button class="btn danger" onclick="startNewAccount()">Start New Account / Clear Form</button></article><article class="card"><h2>1. Your Account</h2><pre id="finalRecord"></pre></article><article class="card"><h2>2. Cover Letter — Bellbrook Flying Fox Community Impact Record</h2><pre id="coverPreview"></pre></article><article class="card"><h2>3. Recipient Directory</h2><div class="directory" id="recipientList"></div></article><article class="card"><h2>4. Submission Checklist</h2><div class="checks"><label><input type="checkbox">Bellbrook Flying Fox Community Impact Record downloaded or printed</label><label><input type="checkbox">Cover letter downloaded or printed separately</label><label><input type="checkbox">Recipient selected</label><label><input type="checkbox">Copy retained by resident</label><label><input type="checkbox">Date sent recorded</label><label><input type="checkbox">Any reply saved for the response log</label></div></article></section></section></main><footer class="foot"><p>© Bellbrook Advocacy Portal</p><p>Bellbrook Flying Fox Community Impact Record</p><p>Community Voice • 2026 Initiative</p><p>No form information is saved after reload or clear.</p></footer>
+<section class="hide" id="done"><article class="card"><h2>Your Bellbrook Flying Fox Community Impact Record Is Complete</h2><p>This record is your account. It remains your account. You decide whether it is shared and who receives it.</p><label class="q">Cover letter recipient type</label><select id="recipientType" onchange="update()"><option value="council">Council / General Manager</option><option value="councillor">Mayor / Councillors</option><option value="mp">Member for Oxley</option><option value="environment">NSW DCCEEW / NSW Environment</option><option value="health">NSW Health</option><option value="oversight">NSW Ombudsman</option><option value="media">Media / Community Advocacy</option></select><button class="btn primary" onclick="downloadRecord()">Download Bellbrook Flying Fox Community Impact Record</button><button class="btn" onclick="downloadCoverLetter()">Download Cover Letter</button><button class="btn" onclick="downloadPackage()">Download Submission Package</button><button class="btn" onclick="window.print()">Print This Page</button><button class="btn" onclick="emailIt()">Optional: Submit Account To Investigation Archive</button><button class="btn danger" onclick="startNewAccount()">Start New Account / Clear Form</button></article><article class="card"><h2>1. Resident Submission</h2><pre id="finalRecord"></pre></article><article class="card"><h2>2. Cover Letter — Bellbrook Flying Fox Community Impact Record</h2><pre id="coverPreview"></pre></article><article class="card"><h2>3. Recipient Directory</h2><div class="directory" id="recipientList"></div></article><article class="card"><h2>4. Submission Checklist</h2><div class="checks"><label><input type="checkbox">Bellbrook Flying Fox Community Impact Record downloaded or printed</label><label><input type="checkbox">Cover letter downloaded or printed separately</label><label><input type="checkbox">Recipient selected</label><label><input type="checkbox">Copy retained by resident</label><label><input type="checkbox">Date sent recorded</label><label><input type="checkbox">Any reply saved for the response log</label></div></article></section></section></main><footer class="foot"><p>© Bellbrook Advocacy Portal</p><p>Bellbrook Flying Fox Community Impact Record</p><p>Community Voice • 2026 Initiative</p><p>No form information is saved after reload or clear.</p></footer>
 <script>
 let step=1;
 const maxStep=4;
@@ -52,72 +52,35 @@ const coverBodies={
 function showPage(p){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(p).classList.add('active');scrollTo(0,0);update()}
 document.querySelectorAll('.opts').forEach(box=>{const type=box.dataset.type||'checkbox',name=box.dataset.name;box.innerHTML=box.dataset.options.split('|').map(x=>`<label><input type="${type}" name="${name}" value="${x}"><span>${x}</span></label>`).join('')});
 function fd(){return new FormData(document.getElementById('wizard'))}
+function hasValue(value){return String(value||'').trim().length>0}
 function val(n,d='Not provided'){return fd().get(n)||d}
 function all(n){return fd().getAll(n)}
-function bullets(n,empty='Not selected'){const a=all(n);return a.length?a.map(x=>'• '+x).join('\n'):'• '+empty}
 function today(){return new Date().toLocaleString('en-AU')}
-function record(){return `BELLBROOK FLYING FOX COMMUNITY IMPACT RECORD
-Generated: ${today()}
+function fieldLine(label,name){const value=String(fd().get(name)||'');return hasValue(value)?label+': '+value+'\n':''}
+function typedTextBlock(title,name){const value=String(fd().get(name)||'');return hasValue(value)?title+'\n'+value+'\n\n':''}
+function selectedBullets(name){const items=all(name).filter(x=>hasValue(x));return items.map(x=>'• '+x).join('\n')}
+function listBlock(title,name,intro){const items=selectedBullets(name);return items?title+'\n'+(intro?intro+'\n':'')+items+'\n\n':''}
+function selectedValue(name){const value=String(fd().get(name)||'');return hasValue(value)?value:''}
+function record(){
+  const details=fieldLine('Name','name')+fieldLine('Area of Bellbrook','area')+fieldLine('Connection to Bellbrook','connection')+fieldLine('Time living or working in Bellbrook','years')+fieldLine('Contact details','contact');
+  const account=typedTextBlock('MY ACCOUNT','experience')+typedTextBlock('SPECIFIC INCIDENT OR MOMENT','incident')+typedTextBlock('WHEN THIS STARTED OR CHANGED','turning');
+  const first=selectedValue('firstNoticed');
+  const impacts=listBlock('IMPACTS I HAVE EXPERIENCED — PROPERTY AND DAILY LIFE','physical','I have selected the following property and daily life impacts:')+listBlock('IMPACTS I HAVE EXPERIENCED — HEALTH AND WELLBEING','health','I have selected the following health and wellbeing impacts:')+listBlock('IMPACTS I HAVE EXPERIENCED — FINANCIAL AND ECONOMIC','financialChecks','I have selected the following financial or economic impacts:')+listBlock('IMPACTS I HAVE EXPERIENCED — COMMUNITY AND SOCIAL','communityChecks','I have selected the following community or social impacts:');
+  const contacted=selectedBullets('contacted');
+  const outcome=typedTextBlock('RESPONSE OR OUTCOME I RECEIVED','authorityOutcome');
+  const requested=selectedBullets('requested');
+  const custom=typedTextBlock('ADDITIONAL REQUESTS','customRequests');
+  const permission=selectedValue('permission');
+  const extra=typedTextBlock('ANYTHING ELSE','anythingElse');
+  return `BELLBROOK FLYING FOX COMMUNITY IMPACT RECORD
 
-AUTHORSHIP AND OWNERSHIP
-Prepared Using: Bellbrook Advocacy Portal
-Account Author: ${val('name','Resident / anonymous')}
-Account Status: First-person resident account
-Formatting Assistance: Bellbrook Advocacy Portal
-Ownership: The contents remain the account and observations of the resident.
+This is my account of how the Bellbrook flying fox camp has affected me, my home, my daily life, and my community.
 
-SECTION 1 — PERSON AND CONTEXT
-Name: ${val('name','Not provided / anonymous')}
-Area: ${val('area','Not provided')}
-Connection to Bellbrook: ${val('connection','Not specified')}
-Time in Bellbrook: ${val('years','Not specified')}
-Contact details supplied by resident: ${val('contact','Not provided')}
+${details?'MY DETAILS\n'+details+'\n':''}${account}${first?'WHEN I FIRST NOTICED THE IMPACT\n'+first+'\n\n':''}${impacts}${contacted?'CONTACT AND RESPONSE HISTORY\nI have contacted:\n'+contacted+'\n\n':''}${outcome}${requested?'WHAT I AM ASKING FOR\nI am asking for:\n'+requested+'\n\n':''}${custom}${permission?'PERMISSION\nI give permission according to this selection:\n'+permission+'\n\n':''}${extra}PORTAL NOTE
+This account was prepared using the Bellbrook Advocacy Portal. The portal assisted with formatting only. The account remains my own account and observations.
 
-SECTION 2 — COMMUNITY TESTIMONY
-The resident reports the following in their own words:
-${val('experience','No daily-life narrative provided')}
-
-Specific incident or moment:
-${val('incident','No specific incident provided')}
-
-Timeline / duration:
-First affected: ${val('firstNoticed','Not specified')}
-Turning point / timeline:
-${val('turning','Not provided')}
-
-SECTION 3 — SUPPORTING IMPACT INDICATORS
-Property and daily life:
-${bullets('physical')}
-
-Health and wellbeing:
-${bullets('health')}
-
-Financial and economic:
-${bullets('financialChecks')}
-
-Community and social:
-${bullets('communityChecks')}
-
-SECTION 4 — CONTACT / RESPONSE HISTORY
-The resident reports contacting:
-${bullets('contacted')}
-
-Outcome / response history:
-${val('authorityOutcome','Not provided')}
-
-SECTION 5 — REQUESTED ACTIONS
-The resident supports or requests:
-${bullets('requested')}
-
-Additional requests:
-${val('customRequests','Not provided')}
-
-SECTION 6 — PERMISSION AND USE
-Permission level selected: ${val('permission','Not selected')}
-Additional comments:
-${val('anythingElse','Not provided')}
-
-Submitted via Bellbrook Advocacy Portal`;}
+Generated: ${today()}`;
+}
 function selectedType(){let e=document.getElementById('recipientType');return e?e.value:'council'}
 function selectedLabel(){let e=document.getElementById('recipientType');return e?e.options[e.selectedIndex].text:'Council / General Manager'}
 function safeFilePart(text){return String(text||'recipient').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'recipient'}

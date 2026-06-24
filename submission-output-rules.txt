@@ -1,0 +1,19 @@
+Resident submission output rule:
+
+The Bellbrook Flying Fox Community Impact Record must read as a first-person resident submission.
+
+Use:
+- I report
+- I have experienced
+- I have contacted
+- I am asking for
+- I give permission
+
+Do not use:
+- The resident reports
+- The resident requests
+- The resident has experienced
+
+Portal metadata belongs at the bottom as a short note.
+
+Empty fields should not dominate the submission.

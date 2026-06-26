@@ -16,6 +16,20 @@ The public Community Discovery board may show:
 
 The public board must not show names, addresses, contact details, or full account text.
 
+## Current Community Suggestions rule
+
+Current Community Suggestions starts empty.
+
+Do not prefill the board with example concerns, placeholders, test items, assumed concerns, or demonstration suggestions.
+
+A concern may appear on the public board only after a real archive receipt has been reviewed and manually added to the board.
+
+Empty-state wording should say:
+
+No community suggestions have been added yet.
+
+When Community Discovery archive receipts are reviewed, non-identifying concern titles may appear here with verified resident account counts and unverified community submission counts.
+
 ## Counting rule
 
 A submission can be archived even when it cannot be counted.

@@ -57,3 +57,33 @@ Community Discovery should stay short. The form should capture:
 7. Public board permission
 
 Long forms belong in dedicated issue sections after promotion.
+
+## Email archive receipt explanation
+
+The Bellbrook Advocacy Portal does not store a Community Record by itself.
+
+When a resident generates a Community Record, it exists only on their device until they choose what to do with it.
+
+Choosing Email Archive Receipt sends a copy of the Community Record to the Bellbrook community record archive.
+
+The archive receipt allows community concerns to be:
+
+- preserved as part of the Bellbrook community record
+- reviewed for grouping with similar community concerns
+- assessed as either a Verified Resident Account or an Unverified Community Submission
+- counted where appropriate as an independent resident account
+- used to identify emerging community concerns
+- considered for promotion into a dedicated Bellbrook community section where supported by the community record
+
+Emailing an archive receipt does not automatically:
+
+- verify the account
+- count the account as an independent resident account
+- publish the account
+- update the public Community Discovery board
+- promote a community concern
+- send the Community Record to a government agency or other organisation
+
+The archive receipt creates a private community record for review.
+
+Personal information provided for verification remains private and is not displayed on the public Community Discovery board.

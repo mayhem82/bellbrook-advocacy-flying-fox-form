@@ -18,6 +18,16 @@ Standalone GitHub Pages form for collecting Bellbrook flying-fox community impac
 
 This is intentional for the first public version: people can complete the form, export or print the record, then hand it in or send it through a separate channel.
 
+## SEE Rollout Roadmap
+
+The Bellbrook Advocacy Portal is the first operational deployment and validation environment for MAYHEM SEE — the Spatial Evidence Engine.
+
+SEE moves the project from form-first reporting toward location-first investigation. It will allow Bellbrook issues to be linked to points, lines, polygons, ground photographs, historical imagery, Street View, Earth observation and community evidence.
+
+Rollout plan:
+
+- [SEE Rollout Roadmap](docs/SEE-ROLLOUT.md)
+
 ## Canopy Health Evidence Plan
 
 This project may be supported by a separate canopy-health evidence workflow using Google Earth Engine, Google Earth historical imagery, Street View, and ground-level photographs.

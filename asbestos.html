@@ -3,30 +3,65 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bellbrook Community Asbestos Exposure Risk</title>
+<title>Bellbrook Advocacy Portal - Issue 2 Under Construction</title>
 <style>
 body{margin:0;background:#f5f2eb;color:#1f1b16;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;font-size:18px}.top{background:#063d2e;color:white;padding:24px 18px}.wrap{max-width:940px;margin:auto;padding:22px 18px}.nav{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}.nav a,.nav button,.btn{border:0;border-radius:16px;padding:16px 18px;font-weight:900;font-size:18px;text-decoration:none;cursor:pointer}.nav a,.nav button{background:#0b644b;color:white}.hero{background:#071f19;color:white;border-radius:28px;padding:32px 24px;text-align:center;margin-bottom:24px}.hero h2{font-size:38px;line-height:1.05;margin:8px 0}.card{background:white;border:1px solid #ddd6ca;border-radius:24px;padding:28px;margin:0 0 24px}.notice{background:#fff7df;border:2px dashed #b45309;border-radius:18px;padding:18px;margin:18px 0;color:#5d4510}.notice strong{display:block;font-size:23px}.btn{display:block;width:100%;background:white;border:1px solid #d8d0c3;color:#2a241f;margin:10px 0}.primary{background:#087a59;color:white}.yellow{background:#f5aa20;color:#211400}label.q{display:block;font-weight:900;margin:20px 0 8px;font-size:21px}input,textarea{width:100%;border:1px solid #cfc7bb;border-radius:16px;padding:16px;font:inherit;font-size:19px}textarea{min-height:150px}.page,.step,.hide{display:none}.page.active,.step.active{display:block}.opts label{display:flex;gap:12px;border:1px solid #e1dacd;background:#fbfaf7;border-radius:14px;padding:15px;margin:11px 0}.opts input{width:22px;height:22px;flex:0 0 auto}.actions{border-top:1px solid #ddd6ca;padding-top:18px;margin-top:24px}pre{white-space:pre-wrap;background:#1c1917;color:#f5f5f4;border-radius:18px;padding:18px;max-height:620px;overflow:auto}.foot{background:#1e1a17;color:#aaa;text-align:center;padding:34px 18px}@media(min-width:720px){.card{padding:36px}.hero h2{font-size:44px}}
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap"><h1>BELLBROOK ADVOCACY PORTAL</h1><h2>🚧 UNDER CONSTRUCTION — Bellbrook Community Asbestos Exposure Risk</h2><p>Form visible for build and testing only. Not ready for public use.</p><div class="nav"><a href="index.html">Portal Home</a><button onclick="showPage('cover')">Cover</button><button class="yellow" onclick="showPage('form')">Form Build</button></div></div></header>
+<header class="top"><div class="wrap"><h1>BELLBROOK ADVOCACY PORTAL</h1><h2>🚧 UNDER CONSTRUCTION — Issue 2: Asbestos Community Record</h2><p>Form visible for build and testing only. Not ready for public use.</p><div class="nav"><a href="index.html">Portal Home</a><button onclick="showPage('cover')">Cover</button><button class="yellow" onclick="showPage('form')">Form Build</button></div></div></header>
 <main class="wrap">
 <section id="cover" class="page active">
-<div class="hero"><h2>🚧 UNDER CONSTRUCTION</h2><h2>Bellbrook Community Asbestos Exposure Risk</h2><p>Build-stage page for a planned resident account form.</p><button class="btn yellow" onclick="startNewAccount()">OPEN FORM BUILD / TEST ONLY</button></div>
+<div class="hero"><h2>🚧 UNDER CONSTRUCTION</h2><h2>Issue 2: Asbestos Community Record</h2><p>Build-stage page for a planned resident account form about suspected or reported asbestos concern at 17 Main Street, Bellbrook NSW 2440.</p><button class="btn yellow" onclick="startNewAccount()">OPEN FORM BUILD / TEST ONLY</button></div>
 <article class="notice"><strong>FORM NOT READY FOR PUBLIC USE</strong><p>This form is visible so it can be built, tested, reviewed, and corrected. It is not set up ready for public use.</p><p>Any generated text or downloaded file is draft test output only.</p></article>
-<article class="card"><h2>Planned purpose</h2><p>This section is being built to help organise resident accounts, location notes, contact history, and requested actions.</p></article>
+<article class="card"><h2>Address lock</h2><p>The current site reference for this build is <strong>17 Main Street, Bellbrook NSW 2440</strong>.</p><p>Map, address, or street-view evidence identifies location only. It does not prove material type, asbestos content, contamination, cleanup status, or authority response.</p></article>
+<article class="card"><h2>Planned purpose</h2><p>This section is being built to help organise resident accounts, location notes, visual material concerns, contact history, and requested actions.</p><p>The form must not call asbestos confirmed unless there is testing, official confirmation, product identification, or qualified assessment.</p></article>
 </section>
 <section id="form" class="page"><article class="notice"><strong>DRAFT / TEST ONLY</strong><p>This form is not ready for public use. It remains visible for build work.</p></article><form id="wizard">
 <section class="card step active" data-step="1"><h2>About You</h2><label class="q">Name (optional)</label><input name="name"><label class="q">Street or area of Bellbrook</label><input name="area"><label class="q">Connection</label><div class="opts" data-name="connection" data-options="I live nearby|I walk past the area|My family uses nearby public areas|I work nearby|I own or rent nearby property|Other"></div><div class="actions"><button type="button" class="btn primary" onclick="nextStep()">Next Step</button></div></section>
-<section class="card step" data-step="2"><h2>Account Notes</h2><label class="q">Location notes</label><textarea name="location"></textarea><label class="q">What was seen, heard, photographed, reported, or told?</label><textarea name="account"></textarea><div class="actions"><button type="button" class="btn" onclick="backStep()">Back</button><button type="button" class="btn primary" onclick="nextStep()">Next Step</button></div></section>
-<section class="card step" data-step="3"><h2>Contact History</h2><label class="q">Who has been contacted?</label><textarea name="contacted"></textarea><label class="q">What response was received?</label><textarea name="response"></textarea><div class="actions"><button type="button" class="btn" onclick="backStep()">Back</button><button type="button" class="btn primary" onclick="nextStep()">Next Step</button></div></section>
-<section class="card step" data-step="4"><h2>Action Sought</h2><label class="q">What action is being asked for?</label><textarea name="action"></textarea><div class="actions"><button type="button" class="btn" onclick="backStep()">Back</button><button type="button" class="btn primary" onclick="finish()">Generate Draft Test Record</button></div></section>
+<section class="card step" data-step="2"><h2>Location And Account Notes</h2><label class="q">Site identification notes</label><textarea name="location" placeholder="Example: Google Maps shows 17 Main Street, Bellbrook NSW 2440. This identifies the location only."></textarea><label class="q">What was seen, heard, photographed, reported, or told?</label><textarea name="account"></textarea><div class="actions"><button type="button" class="btn" onclick="backStep()">Back</button><button type="button" class="btn primary" onclick="nextStep()">Next Step</button></div></section>
+<section class="card step" data-step="3"><h2>Visual Material Evidence</h2><label class="q">Visual indicators recorded</label><div class="opts" data-name="visual" data-options="Corrugated fibre-cement-style sheeting visible|Broken sheet fragments visible|Weathered cement-like material visible|Fractured edges visible|Dust or debris visible|Material appears disturbed|Photos or video held separately|I cannot tell what the material is|No visual material evidence held yet"></div><label class="q">Visual material notes</label><textarea name="visualNotes" placeholder="Describe visual indicators only. Do not call it confirmed asbestos unless there is testing or qualified confirmation."></textarea><div class="notice"><strong>Evidence limit</strong><p>Photos and visual descriptions can support a precautionary concern and request for inspection, reassessment, or testing. They do not confirm asbestos content by themselves.</p></div><div class="actions"><button type="button" class="btn" onclick="backStep()">Back</button><button type="button" class="btn primary" onclick="nextStep()">Next Step</button></div></section>
+<section class="card step" data-step="4"><h2>Contact History And Action Sought</h2><label class="q">Who has been contacted?</label><textarea name="contacted"></textarea><label class="q">What response was received?</label><textarea name="response"></textarea><label class="q">What action is being asked for?</label><textarea name="action"></textarea><div class="actions"><button type="button" class="btn" onclick="backStep()">Back</button><button type="button" class="btn primary" onclick="finish()">Generate Draft Test Record</button></div></section>
 </form><section class="card" id="live"><h2>Live Preview — Draft / Test Only</h2><pre id="preview"></pre></section><section class="hide" id="done"><article class="notice"><strong>DRAFT TEST OUTPUT ONLY</strong><p>This output is for build testing. The form is not ready for public use.</p></article><article class="card"><h2>Draft Test Record</h2><button class="btn primary" onclick="downloadRecord()">Download Draft Test TXT</button><button class="btn" onclick="startNewAccount()">Start New Account / Clear Form</button><pre id="finalRecord"></pre></article></section></section>
 </main>
-<footer class="foot"><p>© Bellbrook Advocacy Portal</p><p>🚧 UNDER CONSTRUCTION — FORM NOT READY FOR PUBLIC USE</p></footer>
+<footer class="foot"><p>© Bellbrook Advocacy Portal</p><p>🚧 UNDER CONSTRUCTION — ISSUE 2 FORM NOT READY FOR PUBLIC USE</p></footer>
 <script>
-let step=1,maxStep=4;function showPage(p){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(p).classList.add('active');scrollTo(0,0);update()}document.querySelectorAll('.opts').forEach(box=>{let n=box.dataset.name;box.innerHTML=box.dataset.options.split('|').map(x=>`<label><input type="checkbox" name="${n}" value="${x}"><span>${x}</span></label>`).join('')});function fd(){return new FormData(document.getElementById('wizard'))}function v(n){return String(fd().get(n)||'').trim()}function all(n){return fd().getAll(n).join(', ')}function record(){return `DRAFT / TEST ONLY — FORM NOT READY FOR PUBLIC USE\nBellbrook Community Asbestos Exposure Risk\n\nName: ${v('name')}\nArea: ${v('area')}\nConnection: ${all('connection')}\n\nLocation notes:\n${v('location')}\n\nAccount notes:\n${v('account')}\n\nContact history:\n${v('contacted')}\n\nResponse received:\n${v('response')}\n\nAction sought:\n${v('action')}\n\nGenerated: ${new Date().toLocaleString('en-AU')}`}
-function update(){document.getElementById('preview').textContent=record();let f=document.getElementById('finalRecord');if(f)f.textContent=record()}document.getElementById('wizard').addEventListener('input',update);function showStep(){document.querySelectorAll('.step').forEach(s=>s.classList.toggle('active',+s.dataset.step===step));scrollTo(0,0);update()}function nextStep(){step=Math.min(maxStep,step+1);showStep()}function backStep(){step=Math.max(1,step-1);showStep()}function finish(){update();document.getElementById('wizard').classList.add('hide');document.getElementById('live').classList.add('hide');document.getElementById('done').classList.remove('hide');scrollTo(0,0)}function startNewAccount(){document.getElementById('wizard').reset();document.querySelectorAll('#wizard input[type=checkbox]').forEach(x=>x.checked=false);step=1;document.getElementById('wizard').classList.remove('hide');document.getElementById('live').classList.remove('hide');document.getElementById('done').classList.add('hide');showPage('form');showStep();update()}function downloadRecord(){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([record()],{type:'text/plain'}));a.download='bellbrook-asbestos-draft-test.txt';a.click()}update();
+let step=1,maxStep=4;function showPage(p){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(p).classList.add('active');scrollTo(0,0);update()}document.querySelectorAll('.opts').forEach(box=>{let n=box.dataset.name;box.innerHTML=box.dataset.options.split('|').map(x=>`<label><input type="checkbox" name="${n}" value="${x}"><span>${x}</span></label>`).join('')});function fd(){return new FormData(document.getElementById('wizard'))}function v(n){return String(fd().get(n)||'').trim()}function all(n){return fd().getAll(n).join(', ')}function record(){return `DRAFT / TEST ONLY — FORM NOT READY FOR PUBLIC USE
+Issue 2 status: UNDER CONSTRUCTION
+Bellbrook Asbestos Community Record
+
+Site reference: 17 Main Street, Bellbrook NSW 2440
+
+Name: ${v('name')}
+Area: ${v('area')}
+Connection: ${all('connection')}
+
+Site identification notes:
+${v('location')}
+
+Account notes:
+${v('account')}
+
+Visual indicators recorded:
+${all('visual')}
+
+Visual material notes:
+${v('visualNotes')}
+
+Evidence limit:
+Photos and visual descriptions can support a precautionary concern and request for inspection, reassessment, or testing. They do not confirm asbestos content by themselves.
+
+Contact history:
+${v('contacted')}
+
+Response received:
+${v('response')}
+
+Action sought:
+${v('action')}
+
+Generated: ${new Date().toLocaleString('en-AU')}`}
+function update(){document.getElementById('preview').textContent=record();let f=document.getElementById('finalRecord');if(f)f.textContent=record()}document.getElementById('wizard').addEventListener('input',update);function showStep(){document.querySelectorAll('.step').forEach(s=>s.classList.toggle('active',+s.dataset.step===step));scrollTo(0,0);update()}function nextStep(){step=Math.min(maxStep,step+1);showStep()}function backStep(){step=Math.max(1,step-1);showStep()}function finish(){update();document.getElementById('wizard').classList.add('hide');document.getElementById('live').classList.add('hide');document.getElementById('done').classList.remove('hide');scrollTo(0,0)}function startNewAccount(){document.getElementById('wizard').reset();document.querySelectorAll('#wizard input[type=checkbox]').forEach(x=>x.checked=false);step=1;document.getElementById('wizard').classList.remove('hide');document.getElementById('live').classList.remove('hide');document.getElementById('done').classList.add('hide');showPage('form');showStep();update()}function downloadRecord(){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([record()],{type:'text/plain'}));a.download='bellbrook-asbestos-draft-test-17-main-street.txt';a.click()}update();
 </script>
 </body>
 </html>

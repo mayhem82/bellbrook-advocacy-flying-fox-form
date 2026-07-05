@@ -45,23 +45,56 @@ This account was prepared using the Bellbrook Advocacy Portal. The portal assist
 
 Generated: ${today()}`;}
 function selectedType(){let e=document.getElementById('recipientType');return e?e.value:'council'}function selectedLabel(){let e=document.getElementById('recipientType');return e?e.options[e.selectedIndex].text:'Council / General Manager'}function recipientLabelFor(k){let r=recipientOptions.find(x=>x[0]===k);return r?r[1]:selectedLabel()}function safeFilePart(text){return String(text||'recipient').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'recipient'}
-function coverLetterForType(t,label){let nm=val('name','');let body=coverBodies[t]||coverBodies.council;return `Subject: Bellbrook Flying Fox Community Impact Record
+function coverLetterForType(t,label){let nm=val('name','');let body=coverBodies[t]||coverBodies.council;return `COMMUNITY RECORD SUBMISSION
 
-To: ${label}
+Issue: Bellbrook Flying Fox Community Impact Record
+Submitted to: ${label}
+Date: ${new Date().toLocaleDateString('en-AU')}
 
-To Whom It May Concern,
+PURPOSE OF THIS SUBMISSION
 
-Attached is my Bellbrook Flying Fox Community Impact Record.
+This submission provides a structured community record concerning the Bellbrook flying fox issue.
 
-This document was generated from the information I entered. The Bellbrook Advocacy Portal assisted with formatting only. The contents remain my own account and observations. This site does not store the account.
+It has been prepared to assist your organisation in reviewing the resident's information in a clear, consistent and organised format.
+
+REQUESTED CONSIDERATION
 
 ${body}
 
-Please acknowledge receipt and advise how this record will be registered, considered and retained with any relevant records concerning Bellbrook.
+The resident respectfully requests that this information be considered within your organisation's normal responsibilities, policies and decision-making processes.
+
+Where appropriate, the resident requests acknowledgement, consideration of the matters raised, and any action your organisation considers appropriate.
+
+ATTACHED DOCUMENTS
+
+This submission may include:
+• Community Impact Record
+• Supporting documents
+• Archive Receipt
+• Petition Statement
+• Additional attachments selected by the resident
+
+Only the documents selected by the resident are attached.
+
+ABOUT THIS RECORD
+
+This document preserves the resident's own account.
+
+Resident accounts, evidence, observations, requested actions and conclusions are deliberately kept separate to improve clarity and reduce misunderstanding.
+
+COMMUNITY RECORD PROCESS
+
+Where multiple independent resident accounts identify the same community concern, those records may later support creation of a dedicated community issue section.
+
+This does not determine whether any issue has been verified, accepted or acted upon by any authority.
+
+RESIDENT DETAILS
 
 Name: ${nm}
 Area: ${val('area','')}
 Date: ${new Date().toLocaleDateString('en-AU')}
+
+Thank you for taking the time to consider this submission.
 
 Kind regards,
 

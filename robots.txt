@@ -6,6 +6,8 @@ Disallow: /toorooka.html
 Disallow: /toorooka-portal.html
 Disallow: /georges-creek.html
 Disallow: /georges-creek-portal.html
+Disallow: /lower-creek.html
+Disallow: /lower-creek-portal.html
 Allow: /
 
 Sitemap: https://mayhem82.github.io/bellbrook-advocacy-flying-fox-form/sitemap.xml

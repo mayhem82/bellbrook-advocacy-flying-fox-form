@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /asbestos.html
+Disallow: /armidale-road.html
 Allow: /
 
 Sitemap: https://mayhem82.github.io/bellbrook-advocacy-flying-fox-form/sitemap.xml

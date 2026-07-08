@@ -91,15 +91,13 @@ This does not determine whether any issue has been verified, accepted or acted u
 
 RESIDENT DETAILS
 
-Name: ${nm}
-Area: ${val('area','')}
-Date: ${new Date().toLocaleDateString('en-AU')}
+${fieldLine('Name','name')}${fieldLine('Area','area')}Date: ${new Date().toLocaleDateString('en-AU')}
 
 Thank you for taking the time to consider this submission.
 
 Kind regards,
 
-${nm}`;}function coverLetter(){return coverLetterForType(selectedType(),selectedLabel())}
+${nm||'Resident'}`;}function coverLetter(){return coverLetterForType(selectedType(),selectedLabel())}
 function bulletListOrNone(text){return text&&text.trim()?text:'• Not selected'}function recipientWhy(t){return {council:'The resident has identified local management, infrastructure, grant, public-area risk-control, and council record-keeping issues.',councillor:'The resident has identified matters requiring local representation, public accountability, and council decision follow-up.',mp:'The resident has identified a local community impact that may require state-level representation, ministerial contact, and agency support.',environment:'The resident has identified impacts connected to a protected flying-fox camp and a need for lawful management advice or support.',health:'The resident has identified health, wellbeing, odour, sleep, stress, or exposure-related concerns associated with the Bellbrook flying fox issue.',oversight:'The resident has identified concerns about administrative handling, response transparency, record keeping, and whether there is a clear pathway for residents.',media:'The resident has identified public-interest community impacts and has prepared one account within a broader Bellbrook pattern.'}[t]||'The resident has prepared a community impact record for review by the selected recipient.'}
 function recipientActionSummaryForType(t,label){const impactText=[selectedBullets('physical'),selectedBullets('health'),selectedBullets('financialChecks'),selectedBullets('communityChecks')].filter(x=>x).join('\n');const requestText=selectedBullets('requested');const contactText=selectedBullets('contacted');return `RECIPIENT ACTION SUMMARY
 

@@ -1,8 +1,0 @@
-Live output change intent:
-
-Apply first-person resident submission wording to flying-fox.html only.
-
-Do not change index.html.
-Do not change the issue facts landing page.
-Do not change form questions.
-Do not rewrite resident-typed text.

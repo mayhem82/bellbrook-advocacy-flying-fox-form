@@ -1,0 +1,19 @@
+{
+  "name": "3d-model-tool",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Photo-to-3D-model scaffold: builds an approximate Three.js scene of a backyard hoop tunnel + shipping container, exports OBJ/MTL, and renders an isometric preview PNG.",
+  "scripts": {
+    "export": "node scripts/export-obj.js",
+    "preview": "node scripts/render-preview.js",
+    "build": "npm run export && npm run preview"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "playwright": "1.56.1"
+  }
+}

@@ -162,13 +162,19 @@ function buildFence(THREE, position, length) {
   group.add(mesh(THREE, 'fenceCapping', new THREE.CylinderGeometry(0.035, 0.035, length, 8), 'fenceCapping',
     [0, height + 0.02, 0], [0, 0, Math.PI / 2]));
 
-  const postGeometry = new THREE.CylinderGeometry(0.03, 0.03, height + 0.3, 8);
-  const postCount = 6;
-  for (let i = 0; i < postCount; i++) {
-    const x = (i / (postCount - 1) - 0.5) * (length - 1);
-    group.add(mesh(THREE, `fenceOutrigger_${i}`, postGeometry, 'fenceCapping', [x, (height + 0.3) / 2, -0.15]));
-  }
+  group.position.set(position[0], 0, position[2]);
+  return group;
+}
 
+// Two free-standing star-picket posts seen inside the tunnel next to the
+// garden beds (plant trellis supports, not part of the fence or the frame).
+function buildTrellisPickets(THREE, position) {
+  const group = new THREE.Group();
+  group.name = 'TrellisPickets';
+  const postGeometry = new THREE.CylinderGeometry(0.02, 0.02, 1.6, 6);
+  [0, 0.7].forEach((dx, i) => {
+    group.add(mesh(THREE, `picket_${i}`, postGeometry, 'fenceCapping', [dx, 0.8, 0]));
+  });
   group.position.set(position[0], 0, position[2]);
   return group;
 }
@@ -190,27 +196,44 @@ export function buildScene(THREE) {
   const root = new THREE.Group();
   root.name = 'BackyardScene';
 
+  // Layout convention, re-derived from how the photos actually chain
+  // together (walking the tunnel's length, then the container's side wall):
+  // the tunnel and the container sit END TO END along the same line, both
+  // running parallel and close to a single fence behind them — the
+  // container is a continuation of the row, not a separate parallel row.
   const { group: tunnel, tunnelLength } = buildHoopTunnel(THREE);
   root.add(tunnel);
 
-  // Layout convention: the fence runs along the back (most negative Z) as a
-  // backdrop, matching the photos where the tunnel, tank, beds and container
-  // all sit inside the yard in front of it, closer to the camera.
-  const fenceZ = -2.3;
-  const groundLength = tunnelLength + 6;
-  const groundDepth = 10;
-  const groundCenterZ = 0.7;
+  const containerLength = DIMENSIONS.container.length;
+  const containerGap = 1.5; // open ground between the last arch and the container
+  const containerCenterX = tunnelLength + containerGap + containerLength / 2;
+  root.add(buildContainer(THREE, [containerCenterX, 0, 0]));
+
+  const fenceZ = -2.4; // set back from the tunnel/container centreline (Z=0) on the same side for both
+  const fenceStartX = -1.5;
+  const fenceEndX = containerCenterX + containerLength / 2 + 1;
+  const fenceLength = fenceEndX - fenceStartX;
+  root.add(buildFence(THREE, [(fenceStartX + fenceEndX) / 2, 0, fenceZ], fenceLength));
+
+  // Water tank + garden beds cluster near the tunnel's near end, opposite
+  // the container end (matches the photos: tank and beds are seen together
+  // just past the tunnel entrance, well before the container comes into view).
+  root.add(buildWaterTank(THREE, [1.0, 0, -0.35]));
+  root.add(buildGardenBeds(THREE, [1.8, 0, 0.35]));
+  root.add(buildTrellisPickets(THREE, [4.6, 0, 0.1]));
+
+  // Corrugated sheet stacks lean against the fence at both ends of the run.
+  root.add(buildCorrugatedStack(THREE, [0.3, 0, fenceZ + 0.35]));
+  root.add(buildCorrugatedStack(THREE, [tunnelLength - 0.5, 0, fenceZ + 0.35]));
+
+  const groundLength = fenceEndX - fenceStartX + 1;
+  const groundCenterX = (fenceStartX + fenceEndX) / 2;
+  const groundDepth = 5.5;
+  const groundCenterZ = -0.6;
   const ground = mesh(THREE, 'ground',
     new THREE.BoxGeometry(groundLength, 0.05, groundDepth), 'ground',
-    [tunnelLength / 2, -0.025, groundCenterZ]);
+    [groundCenterX, -0.025, groundCenterZ]);
   root.add(ground);
-
-  const containerLength = DIMENSIONS.container.length;
-  root.add(buildContainer(THREE, [tunnelLength - containerLength / 2 - 0.3, 0, 4.3]));
-  root.add(buildWaterTank(THREE, [0.9, 0, -0.2]));
-  root.add(buildGardenBeds(THREE, [2.0, 0, 0.3]));
-  root.add(buildFence(THREE, [tunnelLength / 2, 0, fenceZ], groundLength - 1));
-  root.add(buildCorrugatedStack(THREE, [tunnelLength - 5.0, 0, fenceZ + 0.5]));
 
   return root;
 }

@@ -22,18 +22,19 @@ fill.position.set(-6, 5, -8);
 scene.add(fill);
 
 const tunnelLength = (DIMENSIONS.tunnel.archCount - 1) * DIMENSIONS.tunnel.archSpacing;
-const centerX = tunnelLength / 2;
-const centerZ = 0.5;
+const containerCenterX = tunnelLength + 1.5 + DIMENSIONS.container.length / 2;
+const centerX = containerCenterX / 2;
+const centerZ = -0.6;
 
 const aspect = width / height;
-const viewSize = 14;
+const viewSize = 22;
 const camera = new THREE.OrthographicCamera(
   (-viewSize * aspect) / 2, (viewSize * aspect) / 2,
   viewSize / 2, -viewSize / 2,
   0.1, 100,
 );
-const dist = 18;
-camera.position.set(centerX - dist * 0.6, dist * 0.75, centerZ + dist);
+const dist = 26;
+camera.position.set(centerX - dist * 0.6, dist * 0.7, centerZ + dist);
 camera.lookAt(centerX, 0.8, centerZ);
 
 renderer.render(scene, camera);

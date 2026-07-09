@@ -86,6 +86,16 @@ it by eye, rather than from an arbitrary guess.
   the photos show them from oblique angles without a common reference line,
   so gaps between structures are a plausible layout, not a survey.
 
+### Layout note
+
+The tunnel and the container sit **end to end along the same fence line**,
+not side by side as an earlier version of this model had them — walking
+through the photos in sequence, the container's far wall is where the first
+arch starts (visible in the wide container-side shot), so they're a single
+continuous row parallel to one timber fence, not two parallel rows. The
+water tank and garden beds cluster near the tunnel's near end (entrance),
+opposite the container.
+
 ## Opening the OBJ in Blender (or another viewer)
 
 1. Open Blender, then **File → Import → Wavefront (.obj)**.

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Build-stage page for a planned Bellbrook streets and roads record. Not ready for public use.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦇</text></svg>">
+<title>Bellbrook Community Resilience Portal - Issue 3 Under Construction</title>
+<style>
+body{margin:0;background:#f5f2eb;color:#1f1b16;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;font-size:18px}.top{background:#063d2e;color:white;padding:24px 18px}.wrap{max-width:940px;margin:auto;padding:22px 18px}.nav{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}.nav a,.nav button,.btn{border:0;border-radius:16px;padding:16px 18px;font-weight:900;font-size:18px;text-decoration:none;cursor:pointer}.nav a,.nav button{background:#0b644b;color:white}.hero{background:#071f19;color:white;border-radius:28px;padding:32px 24px;text-align:center;margin-bottom:24px}.hero h2{font-size:38px;line-height:1.05;margin:8px 0}.card{background:white;border:1px solid #ddd6ca;border-radius:24px;padding:28px;margin:0 0 24px}.notice{background:#fff7df;border:2px dashed #b45309;border-radius:18px;padding:18px;margin:18px 0;color:#5d4510}.notice strong{display:block;font-size:23px}.btn{display:block;width:100%;background:white;border:1px solid #d8d0c3;color:#2a241f;margin:10px 0}.primary{background:#087a59;color:white}.yellow{background:#f5aa20;color:#211400}label.q{display:block;font-weight:900;margin:20px 0 8px;font-size:21px}input,textarea{width:100%;border:1px solid #cfc7bb;border-radius:16px;padding:16px;font:inherit;font-size:19px}textarea{min-height:150px}.page,.step,.hide{display:none}.page.active,.step.active{display:block}.opts label{display:flex;gap:12px;border:1px solid #e1dacd;background:#fbfaf7;border-radius:14px;padding:15px;margin:11px 0}.opts input{width:22px;height:22px;flex:0 0 auto}.actions{border-top:1px solid #ddd6ca;padding-top:18px;margin-top:24px}pre{white-space:pre-wrap;background:#1c1917;color:#f5f5f4;border-radius:18px;padding:18px;max-height:620px;overflow:auto}.bottomnav{background:white;border:1px solid #ddd6ca;border-radius:22px;padding:22px;margin:28px 0 6px}.bottomnav h2{font-size:24px;margin:0 0 10px}.foot{background:#1e1a17;color:#aaa;text-align:center;padding:34px 18px}@media(min-width:720px){.card{padding:36px}.hero h2{font-size:44px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><h1>BELLBROOK COMMUNITY RESILIENCE PORTAL</h1><h2>UNDER CONSTRUCTION — Issue 3: Bellbrook Streets and Roads</h2><p>Form visible for build and testing only. Not ready for public use.</p><div class="nav"><a href="bellbrook-portal.html">Bellbrook Portal</a><button onclick="showPage('cover')">Cover</button><button class="yellow" onclick="showPage('form')">Form Build</button></div></div></header>
+<main class="wrap">
+<section id="cover" class="page active">
+<div class="hero"><h2>NOT READY FOR PUBLIC USE</h2><p>This future section is being prepared for a Bellbrook streets and roads record. It is not ready for public use and does not currently identify a public issue, location, person, property, or finding.</p><button class="btn yellow" onclick="startNewAccount()">OPEN FORM BUILD / TEST ONLY</button></div>
+<article class="notice"><strong>FORM NOT READY FOR PUBLIC USE</strong><p>This form is visible so it can be built, tested, reviewed, and corrected. It is not set up ready for public use.</p><p>Any generated text or downloaded file is draft test output only.</p></article>
+<article class="card"><h2>No public issue finding</h2><p>This build page is a placeholder for a future Bellbrook streets and roads record workflow.</p><p>It does not state that any location, event, concern, response, or outcome has been verified.</p></article>
+<article class="card"><h2>Planned purpose</h2><p>This section is being built to help residents organise accounts of local street and road conditions &mdash; things like surface condition, drainage, signage, verges, and access &mdash; along with location notes, evidence descriptions, who was contacted, what reply was received, and what action is being asked for.</p><p>The form must separate resident accounts, observations, evidence held, verification needed, and requested action.</p></article>
+</section>
+<section id="form" class="page"><article class="notice"><strong>DRAFT / TEST ONLY</strong><p>This form is not ready for public use. It remains visible for build work.</p></article><form id="wizard">
+<section class="card step active" data-step="1"><h2>About You</h2><label class="q" for="sr-name">Name (optional)</label><input id="sr-name" name="name"><label class="q" for="sr-area">Street or area of Bellbrook</label><input id="sr-area" name="area"><label class="q">Connection</label><div class="opts" data-name="connection" data-options="I live nearby|I walk past the area|My family uses nearby public areas|I work nearby|I own or rent nearby property|Other"></div><div class="actions"><button type="button" class="btn primary" onclick="nextStep()">Next Step</button></div></section>
+<section class="card step" data-step="2"><h2>Location And Account Notes</h2><label class="q" for="sr-location">Site identification notes</label><textarea id="sr-location" name="location" placeholder="Describe the location generally. Do not include private details unless needed for your own record."></textarea><label class="q" for="sr-account">What was seen, heard, photographed, reported, or told?</label><textarea id="sr-account" name="account"></textarea><div class="actions"><button type="button" class="btn" onclick="backStep()">Back</button><button type="button" class="btn primary" onclick="nextStep()">Next Step</button></div></section>
+<section class="card step" data-step="3"><h2>Evidence Notes</h2><label class="q">Evidence indicators recorded</label><div class="opts" data-name="visual" data-options="Photos or video held separately|Document or letter held separately|Screenshot held separately|Reference number held separately|Witness account available|Public notice observed|Physical condition observed|I cannot verify the issue|No evidence held yet"></div><label class="q" for="sr-visualNotes">Evidence notes</label><textarea id="sr-visualNotes" name="visualNotes" placeholder="Describe what evidence exists only. Do not call anything proven unless there is official confirmation or qualified assessment."></textarea><div class="notice"><strong>Evidence limit</strong><p>Photos, descriptions, documents, and resident accounts can support a request for inspection, disclosure, or review. They do not prove cause, responsibility, or formal findings by themselves.</p></div><div class="actions"><button type="button" class="btn" onclick="backStep()">Back</button><button type="button" class="btn primary" onclick="nextStep()">Next Step</button></div></section>
+<section class="card step" data-step="4"><h2>Who You Contacted And What Happened</h2><label class="q">Who did you contact?</label><div class="opts" data-name="contacted" data-options="Kempsey Shire Council|Councillor or Mayor|NSW government agency|NSW Health|NSW Ombudsman|Police or emergency service|Media or community advocate|No one yet|Not sure"></div><label class="q">What proof do you have?</label><div class="opts" data-name="proof" data-options="Email sent or received|Letter sent or received|Text message|Phone call note|Reference number|Photo of notice or sign|Meeting note|Public statement|No proof held yet|Not sure"></div><label class="q" for="sr-response">What did they say?</label><textarea id="sr-response" name="response"></textarea><label class="q">What signs, controls, notices, or follow-up did you see?</label><div class="opts" data-name="controls" data-options="Warning sign|Fence or barrier|Area controlled|Work observed|Resident notice received|Public notice found|No visible control seen|Not sure"></div><label class="q" for="sr-action">What do you want done?</label><textarea id="sr-action" name="action"></textarea><div class="actions"><button type="button" class="btn" onclick="backStep()">Back</button><button type="button" class="btn primary" onclick="finish()">Generate Draft Test Record</button></div></section>
+</form><section class="card" id="live"><h2>Live Preview — Draft / Test Only</h2><pre id="preview"></pre></section><section class="hide" id="done"><article class="notice"><strong>DRAFT TEST OUTPUT ONLY</strong><p>This output is for build testing. The form is not ready for public use.</p></article><article class="card"><h2>Draft Test Record</h2><button class="btn primary" onclick="downloadRecord()">Download Draft Test TXT</button><button class="btn" onclick="startNewAccount()">Start New Account / Clear Form</button><pre id="finalRecord"></pre></article></section></section>
+<nav class="bottomnav" aria-label="Bottom navigation"><h2>Where to next?</h2><a class="btn yellow" href="bellbrook-portal.html">Return to Bellbrook Portal</a><a class="btn primary" href="flying-fox.html">Bellbrook Flying Fox Camp</a><a class="btn primary" href="discovery.html">Community Discovery</a><a class="btn primary" href="methodology.html">How Community Records Work</a><a class="btn primary" href="legal.html">Legal &amp; Privacy Notice</a><a class="btn muted" href="index.html">← NSW Community Resilience Portals</a></nav>
+</main>
+<footer class="foot"><p>© Bellbrook Community Resilience Portal</p><p>UNDER CONSTRUCTION — ISSUE 3 FORM NOT READY FOR PUBLIC USE</p></footer>
+<script>
+let step=1,maxStep=4;function showPage(p){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(p).classList.add('active');scrollTo(0,0);update()}document.querySelectorAll('.opts').forEach(box=>{let n=box.dataset.name;box.innerHTML=box.dataset.options.split('|').map(x=>`<label><input type="checkbox" name="${n}" value="${x}"><span>${x}</span></label>`).join('')});function fd(){return new FormData(document.getElementById('wizard'))}function v(n){return String(fd().get(n)||'').trim()}function all(n){return fd().getAll(n).join(', ')}function record(){return `DRAFT / TEST ONLY — FORM NOT READY FOR PUBLIC USE
+Issue 3 status: UNDER CONSTRUCTION
+Bellbrook Streets and Roads Record
+
+No public issue, location, event, concern, response, or outcome is verified by this draft form.
+
+Name: ${v('name')}
+Area: ${v('area')}
+Connection: ${all('connection')}
+
+Site identification notes:
+${v('location')}
+
+Account notes:
+${v('account')}
+
+Evidence indicators recorded:
+${all('visual')}
+
+Evidence notes:
+${v('visualNotes')}
+
+Evidence limit:
+Photos, descriptions, documents, and resident accounts can support a request for inspection, disclosure, or review. They do not prove cause, responsibility, or formal findings by themselves.
+
+Who I contacted:
+${all('contacted')}
+
+Proof I have:
+${all('proof')}
+
+What they said:
+${v('response')}
+
+Signs, controls, notices, or follow-up seen:
+${all('controls')}
+
+What I want done:
+${v('action')}
+
+Generated: ${new Date().toLocaleString('en-AU')}`}
+function update(){document.getElementById('preview').textContent=record();let f=document.getElementById('finalRecord');if(f)f.textContent=record()}document.getElementById('wizard').addEventListener('input',update);function showStep(){document.querySelectorAll('.step').forEach(s=>s.classList.toggle('active',+s.dataset.step===step));scrollTo(0,0);update()}function nextStep(){step=Math.min(maxStep,step+1);showStep()}function backStep(){step=Math.max(1,step-1);showStep()}function finish(){update();document.getElementById('wizard').classList.add('hide');document.getElementById('live').classList.add('hide');document.getElementById('done').classList.remove('hide');scrollTo(0,0)}function startNewAccount(){document.getElementById('wizard').reset();document.querySelectorAll('#wizard input[type=checkbox]').forEach(x=>x.checked=false);step=1;document.getElementById('wizard').classList.remove('hide');document.getElementById('live').classList.remove('hide');document.getElementById('done').classList.add('hide');showPage('form');showStep();update()}function downloadRecord(){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([record()],{type:'text/plain'}));a.download='bellbrook-streets-roads-draft-test.txt';a.click()}update();
+</script>
+</body>
+</html>

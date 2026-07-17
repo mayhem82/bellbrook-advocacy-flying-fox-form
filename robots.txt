@@ -6,6 +6,7 @@ Disallow: /bellbrook-communications.html
 Disallow: /bellbrook-drinking-water.html
 Disallow: /willawarrin.html
 Disallow: /willawarrin-portal.html
+Disallow: /willawarrin-solar-tariff.html
 Disallow: /toorooka.html
 Disallow: /toorooka-portal.html
 Disallow: /georges-creek.html

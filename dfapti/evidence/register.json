@@ -621,6 +621,26 @@
       },
       "superseded_by": null,
       "recorded_at": "2026-07-23T22:36:02Z"
+    },
+    {
+      "evidence_id": "E-032",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": null,
+      "document_title": "Willawarrin's population served is inconsistently reported as either ~130 or 180 residents - an unresolved contradiction, not picked one way",
+      "publication_date": null,
+      "capture_date": "2026-07-23T23:35:37Z",
+      "source_url": null,
+      "classification": "HELD",
+      "confidence": "LOW",
+      "summary": "E-020 recorded the plant as serving 'approximately 130 residents', reproduced again this pass from what appears to be the same NSW Government/council announcement material. However, a separate set of search results - also attributable to the same underlying government release - consistently describe Willawarrin as 'a village of 180 people' relying on carted bore water, reproduced identically across three independent search passes this session. Both figures trace to material that appears to originate from the same NSW Government project announcement, yet state different numbers. Neither is discarded in favour of the other; this is logged as an unresolved internal inconsistency in the public source material, consistent with this register's Contradiction Preservation rule.",
+      "verification_notes": "The '180 people' figure was reproduced identically across three independent WebSearch passes this session (each attributing it to the same NSW Government/Kempsey Shire announcement already cited at E-003/E-020), meeting this register's cross-confirmation bar for the figure's existence in circulating source material - but that same bar is met by the competing '130 residents' figure at E-020. Neither can be preferred over the other without directly fetching and comparing the exact primary document text, which this sandbox cannot do for kempsey.nsw.gov.au/water.dpie.nsw.gov.au (per the standing capability gap logged at E-025).",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Two mutually exclusive figures, each independently cross-confirmed via search; neither individually fetched and hashed against a single named primary document to break the tie."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T23:35:37Z"
     }
   ]
 }

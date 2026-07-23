@@ -94,6 +94,14 @@
         "E-031"
       ],
       "status_change": "None"
+    },
+    {
+      "date": "2026-07-23",
+      "event": "Fourth ongoing-workflow pass. Searched fresh angles: recent (July 2026) news, an NSW Budget/Safe and Secure Water Program allocation angle, and the exact population served. No new completion-status information turned up - still nothing newer than the November 2025 data point (E-029). But a genuine, previously unnoticed contradiction surfaced: Willawarrin's population served is reported as 'approximately 130 residents' in some sources (E-020) and as 'a village of 180 people' in others, both reproduced consistently across independent searches and both apparently tracing to the same NSW Government/council announcement material. Logged honestly as an unresolved discrepancy rather than picking one figure (E-032).",
+      "evidence_ids": [
+        "E-032"
+      ],
+      "status_change": "None"
     }
   ]
 }

@@ -36,8 +36,16 @@ h2{margin-top:0;font-size:28px;line-height:1.2}
 .bottomnav h2{font-size:24px;margin:0 0 10px}
 .foot{background:#1e1a17;color:#aaa;text-align:center;padding:28px 18px}
 a{color:#0b644b}
+.disclaimer{background:#fff7df;border:1px solid #f2d28b;border-radius:22px;padding:22px 26px;margin:0 0 20px}
+.disclaimer h2{font-size:18px;margin:0 0 8px;color:#5d4510}
+.disclaimer p{margin:0 0 8px;font-size:15px}
+.disclaimer p:last-child{margin-bottom:0}
 @media(min-width:720px){.grid{grid-template-columns:1fr 1fr}.card{padding:30px}}
 """
+
+DISCLAIMER = """<section class="disclaimer"><h2>What DFAPTI is (and isn't)</h2><p>This is independent, source-verified research, not an official investigation, complaint, legal proceeding, or government report. It draws only on publicly available government/council material and independently cross-referenced search - every claim is classified as ACCEPTED (verified primary source), HELD (relevant but not fully verified), or an open gap (searched for, not found - logged honestly, not assumed). No finding of fault against any named person or organisation is made or implied anywhere on this site.</p><p>Sources are linked directly wherever available so anyone can check the original document themselves. This register is append-only and corrected in the open: if something here turns out to be wrong, a later entry says so - nothing is quietly edited or removed. See the portal's <a href="__LEGAL_HREF__">Legal &amp; Privacy Notice</a> for the full terms.</p></section>
+"""
+
 
 CLASS_TAG = {
     "ACCEPTED": ("tag", "ACCEPTED"),
@@ -128,9 +136,10 @@ def build_case_page(case_id):
 <p><span class="tag">{esc(case["case_id"])}</span> <span class="tag">Status: {esc(case["status"])}</span> <span class="tag">Opened {esc(case["created_date"])}</span></p>
 <p style="margin-top:14px">{accepted_count} accepted evidence entries &middot; {held_count} held for further verification &middot; {pending_count} open gaps logged honestly rather than guessed at.</p>
 </section>
+{DISCLAIMER.replace("__LEGAL_HREF__", "../../../legal.html")}
 <section class="card"><h2>What this investigation is trying to establish</h2><p>{esc(case["investigation_objective"])}</p></section>
 <section class="card"><h2>Scope</h2><p>{esc(case["scope"])}</p></section>
-<section class="card"><h2>What this is (and isn't)</h2><p>This page shows every entry in the evidence register for this investigation, in the order it was added, exactly as recorded &mdash; nothing is summarised away or smoothed over. Each entry is classified <strong>ACCEPTED</strong> (a verified primary source directly supports the statement), <strong>HELD</strong> (relevant but not yet fully verified, or a claim that could not be independently reproduced on a second check), or an <strong>open gap</strong> (something specific was searched for and not found &mdash; logged honestly rather than left unmentioned). Nothing here is a finding of fault against any person or body.</p></section>
+<section class="card"><h2>How entries are classified</h2><p>This page shows every entry in the evidence register for this investigation, in the order it was added, exactly as recorded &mdash; nothing is summarised away or smoothed over. Each entry is classified <strong>ACCEPTED</strong> (a verified primary source directly supports the statement), <strong>HELD</strong> (relevant but not yet fully verified, or a claim that could not be independently reproduced on a second check), or an <strong>open gap</strong> (something specific was searched for and not found &mdash; logged honestly rather than left unmentioned). Nothing here is a finding of fault against any person or body.</p></section>
 <section class="card"><h2>Timeline</h2><div class="grid">{"".join(timeline_html)}</div></section>
 <section class="card"><h2>Full evidence register</h2><div class="grid">{"".join(evidence_html)}</div></section>
 """
@@ -167,6 +176,7 @@ def build_landing_page():
 <h2>{len(index["cases"])} active case{"s" if len(index["cases"]) != 1 else ""}</h2>
 <p>Every DFAPTI case for the Bellbrook Community Resilience Portal, source-verified and append-only. Pick a case to see its full evidence register.</p>
 </section>
+{DISCLAIMER.replace("__LEGAL_HREF__", "../legal.html")}
 <section class="card"><h2>Cases</h2><div class="grid">{"".join(case_cards)}</div></section>
 <section class="card"><h2>How this works</h2><p>DFAPTI (Deep Forensic All Paths Taken Investigation) tracks the underlying government/council record for issues raised through this portal. Every entry is classified ACCEPTED, HELD, or an open gap - see <a href="rules/factualism-audit.md">the evidence rules</a> this register follows. This is separate from the portal's resident-facing Community Impact Record form, which captures resident testimony directly.</p></section>
 """

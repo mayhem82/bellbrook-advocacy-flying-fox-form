@@ -85,6 +85,15 @@
         "E-029"
       ],
       "status_change": "None"
+    },
+    {
+      "date": "2026-07-23",
+      "event": "Third ongoing-workflow pass. Followed up the new Thunggutti Aboriginal Community path from the previous pass: Council's own 2020-2021 Drinking Water Management System Annual Report - the exact year of the Willawarrin/Bellbrook crisis - records no customer water-quality enquiries at Thunggutti or Stuarts Point, cross-confirmed across two searches. This is evidence, not proof, that Thunggutti did not share the same crisis that year - it narrows but does not close E-028 (E-030). Also found a dated June 2019 Council media release documenting an earlier shire-wide supply-source switch (Sherwood Borefield to Steuart McIntyre Dam) amid declining river levels - genuine context for the drought conditions behind the eventual crisis, but not itself proof of a separate, distinct 2019 Willawarrin trucking episode beyond the one continuous episode already documented at E-001 (E-031). Plant-completion and ribbon-cutting searches turned up nothing newer than the previous pass's November 2025 data point.",
+      "evidence_ids": [
+        "E-030",
+        "E-031"
+      ],
+      "status_change": "None"
     }
   ]
 }

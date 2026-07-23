@@ -581,6 +581,46 @@
       },
       "superseded_by": null,
       "recorded_at": "2026-07-23T21:36:13Z"
+    },
+    {
+      "evidence_id": "E-030",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "Kempsey Shire Council",
+      "document_title": "No customer water-quality enquiries recorded at Thunggutti (or Stuarts Point) during the 2020-2021 reporting year - narrows E-028",
+      "publication_date": "2021-01-01",
+      "capture_date": "2026-07-23T22:36:02Z",
+      "source_url": "https://www.kempsey.nsw.gov.au/files/sharedassets/public/v/1/docs/departments/water-amp-sewer/kempsey-shire-council-annual-water-qualty-report-2020-2021.pdf.pdf",
+      "classification": "ACCEPTED",
+      "confidence": "MEDIUM",
+      "summary": "Kempsey Shire Council's own Drinking Water Management System Annual Report for July 2020-June 2021 - the exact reporting year covering the Willawarrin/Bellbrook trucked-water crisis documented in E-001 - states that the majority of customer water-quality enquiries that year were in the Kempsey/Lower Macleay supply area, and that no customer enquiries were recorded at either Stuarts Point or the Thunggutti Aboriginal Community water supply. This is evidence, not proof, that Thunggutti did not experience a comparable water-quality crisis during that specific year - absence of customer complaints does not rule out an unreported issue, and this covers only the 2020-2021 year, not the full period this investigation covers for Willawarrin/Bellbrook.",
+      "verification_notes": "The specific detail ('no customer enquiries... at either Stuarts Point or Thunggutti') was reproduced consistently across two independent search passes, both attributing it to this same annual report. The report's raw PDF content itself has not been directly fetched (kempsey.nsw.gov.au is blocked in this sandbox, confirmed previously at E-025) - this relies on WebSearch synthesis of the document's content, not a direct read.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Specific detail cross-confirmed across two independent search passes; underlying PDF not directly fetched due to a sandbox network restriction."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T22:36:02Z"
+    },
+    {
+      "evidence_id": "E-031",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "Kempsey Shire Council",
+      "document_title": "June 2019 media release documents an earlier shire-wide supply-source switch, providing context for - but not proof of - a distinct 2019 Willawarrin trucking episode",
+      "publication_date": "2019-06-11",
+      "capture_date": "2026-07-23T22:36:02Z",
+      "source_url": "https://www.kempsey.nsw.gov.au/media-releases/2019/mr20190611a.html",
+      "classification": "HELD",
+      "confidence": "LOW",
+      "summary": "A dated Kempsey Shire Council media release (11 June 2019) documents Council switching its shire-wide water supply source from the Sherwood Borefield to the Steuart McIntyre Dam, due to declining river levels and continued dry weather. This is genuine primary-source context for the broader 2017-2022 pattern claimed at E-006 - it shows the drought conditions behind the eventual Willawarrin/Bellbrook crisis were already affecting Council's water management well before the 'many months' of trucking resolved in June 2020 (E-001). However, this release is about a shire-wide supply-source change, not specifically about Willawarrin/Bellbrook trucking - it does not itself confirm a distinct, separate 2019 trucking episode independent from the single continuous episode already documented at E-001. It may simply be the lead-up to that same episode, not proof of an additional one.",
+      "verification_notes": "Primary source located via search (kempsey.nsw.gov.au's own media release page). Held rather than accepted for the specific 2017-2022 multi-year claim in E-006, because this document does not itself state a separate Willawarrin-specific trucking event in 2019 - it is relevant context, not direct confirmation of that narrower claim.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Primary source located but does not directly confirm the specific claim it's being used to contextualise (a distinct 2019 Willawarrin trucking episode)."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T22:36:02Z"
     }
   ]
 }

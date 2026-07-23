@@ -1,0 +1,18 @@
+{
+  "case_id": "DFAPTI-BB-2026-00001",
+  "events": [
+    {
+      "date": "2026-07-23",
+      "event": "Case opened following a resident-flagged correction: the drinking-water trucking arrangement has been running for a lot longer than a single resolved 2020 episode. Initial sweep confirmed two separate documented trucked-water episodes (2020, 2023), the $8 million treatment-plant fix now under construction, and an open gap on whether the plant has actually been completed as of today. Added E-001 through E-006.",
+      "evidence_ids": [
+        "E-001",
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005",
+        "E-006"
+      ],
+      "status_change": "None -> ACTIVE"
+    }
+  ]
+}

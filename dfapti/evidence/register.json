@@ -1,0 +1,126 @@
+{
+  "$schema": "../schemas/evidence-schema.json",
+  "register_notice": "Append-only. Entries are never deleted or edited in place; corrections are new entries linked via superseded_by.",
+  "entries": [
+    {
+      "evidence_id": "E-001",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "Kempsey Shire Council",
+      "document_title": "Willawarrin and Bellbrook return to river supply after months of trucked-in water",
+      "publication_date": "2020-06-22",
+      "capture_date": "2026-07-23T13:00:00Z",
+      "source_url": "https://archive.kempsey.nsw.gov.au/media-releases/2020/mr20200622a.html",
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "Kempsey Shire Council's own media release confirming Willawarrin and Bellbrook were switched back to Macleay River supply on Thursday 18 June 2020, after 'many months' of having drinking water trucked in due to high iron and manganese levels making river water undrinkable. Council attributes the fix to a combination of bores and treatment processes.",
+      "verification_notes": "Primary source: the council's own archived media release. Corroborated by contemporaneous secondary coverage (Macleay Argus, Port Macquarie News) reporting the same return-to-supply date and cause, though those are not themselves relied on as the primary source.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Source URL and content confirmed via search; not yet independently fetched and hashed."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T13:00:00Z"
+    },
+    {
+      "evidence_id": "E-002",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "Kempsey Shire Council",
+      "document_title": "Steuart McIntyre dam water supply (27 September 2023 update)",
+      "publication_date": "2023-09-27",
+      "capture_date": "2026-07-23T13:00:00Z",
+      "source_url": "https://www.kempsey.nsw.gov.au/Your-Council/Council-news-public-notices/Council-news-updates/20230927-Steuart-McIntyre-dam-water-supply",
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "Kempsey Shire Council's own update confirming a second, separate trucked-water episode: from 27 September 2023 the Shire moved solely to Steuart McIntyre Dam water supply after Macleay River levels dropped below extraction limits. Trucks had already been supplying approximately 17,000 litres of dam water to Willawarrin for about two weeks beforehand, due to high iron and manganese levels again making river water undrinkable - confirming this is a recurring failure mode, not the single 2020 event in E-001.",
+      "verification_notes": "Primary source: the council's own news update page. Cross-confirmed via independent search returning consistent dates, volumes, and cause.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Source URL and content confirmed via search; not yet independently fetched and hashed."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T13:00:00Z"
+    },
+    {
+      "evidence_id": "E-003",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "NSW Government / Kempsey Shire Council",
+      "document_title": "Sod turns on new $8 million Willawarrin Water Treatment Plant",
+      "publication_date": null,
+      "capture_date": "2026-07-23T13:00:00Z",
+      "source_url": "https://www.kempsey.nsw.gov.au/Your-Council/Council-news-public-notices/Council-news-updates/Sod-turns-on-new-8-million-Willawarrin-Water-Treatment-Plant",
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "Joint NSW Government / Kempsey Shire Council announcement of the permanent fix for Willawarrin's recurring water-quality failures: an $8 million water treatment plant, funded by more than $2 million from the NSW Government's Safe and Secure Water Program and over $6 million from Kempsey Shire Council, replacing the town's existing 1960s-era bore-water infrastructure. Construction contract awarded to LC Water, with site works (transformer, pipelines connecting the Macleay River bores) underway.",
+      "verification_notes": "Corroborated across the NSW Government's own water.dpie.nsw.gov.au news page, the equivalent nsw.gov.au ministerial release, and Kempsey Shire Council's own news page, all describing the same funding figures and scope.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Source URL and content confirmed via search; not yet independently fetched and hashed."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T13:00:00Z"
+    },
+    {
+      "evidence_id": "E-004",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "Kempsey Shire Council",
+      "document_title": "Willawarrin Water Treatment Plant - Current works project page",
+      "publication_date": null,
+      "capture_date": "2026-07-23T13:00:00Z",
+      "source_url": "https://www.kempsey.nsw.gov.au/Your-Valley/Ongoing-works-in-the-shire/Major-projects/Current-works/Willawarrin-Water-Treatment-Plant",
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "Council's own current-works page for the plant: a 0.25 megalitre/day ultrafiltration treatment plant with UV disinfection, water storage, reticulation pumps and chemical dosing, connected via new pipelines to bores at the Macleay River. Construction (contractor LC Water) commenced 24 March 2025; council states completion is targeted for 'early 2026', with testing and commissioning to follow construction, and reservoir renovation to follow commissioning.",
+      "verification_notes": "Primary source: council's own project page. The 'early 2026' completion date is stated as a target by the council itself, not independently confirmed as an achieved outcome - see E-005 for the status gap this leaves open.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Source URL and content confirmed via search; not yet independently fetched and hashed."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T13:00:00Z"
+    },
+    {
+      "evidence_id": "E-005",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": null,
+      "document_title": "No confirmed completion, commissioning, or delay notice found (search coverage gap)",
+      "publication_date": null,
+      "capture_date": "2026-07-23T13:00:00Z",
+      "source_url": null,
+      "classification": "PENDING",
+      "confidence": "LOW",
+      "summary": "As of this investigation's capture date (23 July 2026), no source has been found confirming whether the Willawarrin Water Treatment Plant (E-003, E-004) has actually been completed, commissioned, or delayed past its stated 'early 2026' target. The most recent dated project material located in this pass is a council community-update PDF referenced as 'Autumn 2025'. Per the Silence Handling rule, the absence of a completion announcement is logged as an open gap tied to the council's own stated target date - it is not treated as evidence of delay or of success either way.",
+      "verification_notes": "This entry exists to record what was searched for and not found, so a future pass does not repeat the same searches without knowing they were already tried. Next step: check for a 'Willawarrin community update' PDF dated later than Autumn 2025, or a council news item announcing commissioning/opening, or continued trucked-water reports after March 2025.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "This entry records an evidence gap, not a fact - no proof-of-fact score applies beyond the default."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T13:00:00Z"
+    },
+    {
+      "evidence_id": "E-006",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": null,
+      "document_title": "Claimed 2017-2022 recurring weather-driven trucking pattern (unverified against a specific primary source)",
+      "publication_date": null,
+      "capture_date": "2026-07-23T13:00:00Z",
+      "source_url": null,
+      "classification": "HELD",
+      "confidence": "LOW",
+      "summary": "Search results referenced a general claim that 'major weather events between 2017 and 2022 impacted Willawarrin's water supply, and in each case Council was forced to transport drinkable water to Willawarrin via truck.' This is plausible and consistent with E-001 and E-002 (which independently confirm two such episodes, 2020 and 2023), but the broader 2017-2022 claim itself traces to a search-engine synthesis, not one identified primary document.",
+      "verification_notes": "HELD per the Factualism Audit: relevant and plausible, but not yet traced to a specific primary source for each claimed year. Needs a direct search of Kempsey Shire Council's media-release archive (archive.kempsey.nsw.gov.au) for each individual year 2017-2019, 2021, 2022 before any of those specific years can be promoted to ACCEPTED.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Not yet independently verified against a specific primary document for the claimed years."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T13:00:00Z"
+    }
+  ]
+}

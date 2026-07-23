@@ -22,6 +22,15 @@
         "E-008"
       ],
       "status_change": "None"
+    },
+    {
+      "date": "2026-07-23",
+      "event": "Pursued additional investigative paths beyond the initial cost/timeline question: political/governance path (confirmed the Member for Oxley held the state Water Minister portfolio during the exact period of the first 2020 trucking crisis - E-009, recorded as a temporal fact only, no finding of action or inaction); health/regulatory path (searched for a specific documented water-quality guideline exceedance for Willawarrin - found only general characterisations, no specific figures, logged as an open gap - E-010); current-status path (repeated the completion-status search - still no confirmation either way, E-005 gap stands). Applied the Structural Harm Mechanism catalogue against all evidence honestly: 'Time as Structural Harm' is a supportable read of the 2020 commitment-to-2025 construction gap (caveated on the unresolved $4M/$8M link in E-007); an initially proposed second mechanism was checked and retracted as not genuinely supported by the evidence.",
+      "evidence_ids": [
+        "E-009",
+        "E-010"
+      ],
+      "status_change": "None"
     }
   ]
 }

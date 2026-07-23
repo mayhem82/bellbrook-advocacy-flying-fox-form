@@ -161,6 +161,46 @@
       },
       "superseded_by": null,
       "recorded_at": "2026-07-23T13:30:00Z"
+    },
+    {
+      "evidence_id": "E-009",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "NSW Parliament",
+      "document_title": "The Hon. Melinda Jane PAVEY MP - Member profile (NSW Parliament)",
+      "publication_date": null,
+      "capture_date": "2026-07-23T20:00:00Z",
+      "source_url": "https://www.parliament.nsw.gov.au/members/Pages/member-details.aspx?pk=16",
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "NSW Parliament's own member record, cross-confirmed via independent search, establishes that Melinda Pavey - the sitting Member for Oxley, the electorate covering Willawarrin and Bellbrook - served concurrently as NSW Minister for Water, Property and Housing from 2 April 2019 to 21 December 2021. This period overlaps entirely with the first documented trucked-water crisis (E-001: 'many months' of trucking, resolved June 2020). This is recorded as a structural/temporal fact only - it is not a finding about any action taken or not taken by Ms Pavey personally, and no such finding is made here.",
+      "verification_notes": "Ministerial tenure dates (2 April 2019 - 21 December 2021) cross-confirmed via independent search; electorate coverage (Willawarrin/Bellbrook within Oxley) already established via the portal's own recipient directory (portal.config.json). No further inference is drawn beyond the temporal overlap itself.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Tenure dates verified via independent search cross-reference; not yet independently fetched and hashed."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T20:00:00Z"
+    },
+    {
+      "evidence_id": "E-010",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": null,
+      "document_title": "No specific water-quality guideline exceedance document found for Willawarrin (search coverage gap)",
+      "publication_date": null,
+      "capture_date": "2026-07-23T20:00:00Z",
+      "source_url": null,
+      "classification": "PENDING",
+      "confidence": "LOW",
+      "summary": "Searched for a specific documented breach of the Australian Drinking Water Guidelines (e.g. manganese/iron exceedance figures) tied to Willawarrin's bore water. Found only general characterisations ('unable to treat water to a safe and acceptable level') in secondary/promotional project material, not a specific NSW Health or council water-quality test result naming an exceeded guideline value. General background on manganese's documented neurological health risk at elevated levels (developmental effects in children) was found but is not yet tied to a Willawarrin-specific measurement.",
+      "verification_notes": "Logged as an open gap, not as absence of harm. Next step: request Kempsey Shire Council's water quality test results/annual Drinking Water Management System report for the Willawarrin supply zone directly (these reports, cited generally in earlier passes, would contain specific figures), or a GIPA request if not already public.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Records an evidence gap and a concrete next step, not a fact."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T20:00:00Z"
     }
   ]
 }

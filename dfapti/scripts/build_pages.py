@@ -66,6 +66,10 @@ def load_json(path, default=None):
 
 
 def page_shell(title, back_href, back_label, heading, subheading, body_html):
+    back_link = (
+        f'<a class="btn muted" href="{esc(back_href)}" style="margin-bottom:14px">&larr; {esc(back_label)}</a>'
+        if back_href else ""
+    )
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,11 +80,11 @@ def page_shell(title, back_href, back_label, heading, subheading, body_html):
 <style>{STYLE}</style>
 </head>
 <body>
-<header class="top"><div class="wrap"><a class="btn muted" href="{esc(back_href)}" style="margin-bottom:14px">&larr; {esc(back_label)}</a><h1>{esc(heading)}</h1><p>{esc(subheading)}</p></div></header>
+<header class="top"><div class="wrap">{back_link}<h1>{esc(heading)}</h1><p>{esc(subheading)}</p></div></header>
 <main class="wrap">
 {body_html}
 </main>
-<footer class="foot">Bellbrook Community Resilience Portal &middot; DFAPTI &mdash; Deep Forensic All Paths Taken Investigation</footer>
+<footer class="foot">DFAPTI &mdash; Deep Forensic All Paths Taken Investigation</footer>
 </body>
 </html>
 """
@@ -174,16 +178,16 @@ def build_landing_page():
     body = f"""
 <section class="hero">
 <h2>{len(index["cases"])} active case{"s" if len(index["cases"]) != 1 else ""}</h2>
-<p>Every DFAPTI case for the Bellbrook Community Resilience Portal, source-verified and append-only. Pick a case to see its full evidence register.</p>
+<p>Every DFAPTI case, source-verified and append-only. Pick a case to see its full evidence register.</p>
 </section>
 {DISCLAIMER.replace("__LEGAL_HREF__", "../legal.html")}
 <section class="card"><h2>Cases</h2><div class="grid">{"".join(case_cards)}</div></section>
-<section class="card"><h2>How this works</h2><p>DFAPTI (Deep Forensic All Paths Taken Investigation) tracks the underlying government/council record for issues raised through this portal. Every entry is classified ACCEPTED, HELD, or an open gap - see <a href="rules/factualism-audit.md">the evidence rules</a> this register follows. This is separate from the portal's resident-facing Community Impact Record form, which captures resident testimony directly.</p></section>
+<section class="card"><h2>How this works</h2><p>DFAPTI (Deep Forensic All Paths Taken Investigation) tracks the underlying government/council record for issues raised by the community. Every entry is classified ACCEPTED, HELD, or an open gap - see <a href="rules/factualism-audit.md">the evidence rules</a> this register follows.</p></section>
 """
     page = page_shell(
-        "DFAPTI - Bellbrook Community Resilience Portal",
-        "../bellbrook-portal.html",
-        "Bellbrook Community Resilience Portal",
+        "DFAPTI",
+        None,
+        None,
         "DFAPTI",
         "Deep Forensic All Paths Taken Investigation — case list.",
         body,

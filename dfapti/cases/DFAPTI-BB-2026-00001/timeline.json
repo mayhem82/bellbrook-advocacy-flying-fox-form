@@ -13,6 +13,15 @@
         "E-006"
       ],
       "status_change": "None -> ACTIVE"
+    },
+    {
+      "date": "2026-07-23",
+      "event": "Resident asked directly: what has water carting cost over the recurring years, compared with the one-off cost of the infrastructure fix? Found one concrete carting-cost figure (E-007: $161,000 NSW Government funding for the January 2020 carting operation, alongside an earlier $4 million filtration-system commitment that appears to have grown into the current $8 million project - unresolved which). No cumulative multi-year carting total was found (E-008) - logged as an open gap with a concrete next step (a GIPA request to Council for water-carting expenditure by financial year) rather than estimated or assumed.",
+      "evidence_ids": [
+        "E-007",
+        "E-008"
+      ],
+      "status_change": "None"
     }
   ]
 }

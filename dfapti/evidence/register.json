@@ -121,6 +121,46 @@
       },
       "superseded_by": null,
       "recorded_at": "2026-07-23T13:00:00Z"
+    },
+    {
+      "evidence_id": "E-007",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "NSW Government / Macleay Argus",
+      "document_title": "Kempsey to receive $4 million for secure water supply (January 2020)",
+      "publication_date": "2020-01-01",
+      "capture_date": "2026-07-23T13:30:00Z",
+      "source_url": "https://www.macleayargus.com.au/story/6584830/kempsey-to-receive-4-million-for-secure-water-supply/",
+      "classification": "HELD",
+      "confidence": "MEDIUM",
+      "summary": "Reports an earlier, January 2020 NSW Government commitment: $4 million toward a specialist water filtration system for Willawarrin, plus a separate additional $161,000 specifically for water carting to Willawarrin and Bellbrook, sized to deliver about 10-13 kilolitres a day to each village. This $4 million filtration commitment is a different, earlier figure to the $8 million treatment plant actually now under construction (E-003/E-004) - either the scope grew, the project was re-tendered at a higher cost, or this was a partial/different works package. Not yet resolved which.",
+      "verification_notes": "Source is a news report (Macleay Argus, January 2020), not yet cross-confirmed against a Kempsey Shire Council or NSW Government primary document from the same date - held at MEDIUM pending that direct confirmation, and to flag the unresolved $4M-vs-$8M discrepancy rather than silently picking one figure.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Single news source only; primary 2020 funding announcement not yet independently located."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T13:30:00Z"
+    },
+    {
+      "evidence_id": "E-008",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": null,
+      "document_title": "No cumulative, multi-year total water-carting cost found (search coverage gap)",
+      "publication_date": null,
+      "capture_date": "2026-07-23T13:30:00Z",
+      "source_url": null,
+      "classification": "PENDING",
+      "confidence": "LOW",
+      "summary": "In response to a direct question - what has trucking water cost across the whole recurring period, compared with the one-off cost of fixing the infrastructure - only one specific, dated carting-cost figure was found: $161,000 in NSW Government funding for a January 2020 carting operation (E-007). No source was found giving a cumulative total across all known trucking episodes (2020, 2023, and the more general 2017-2022 pattern in E-006), and no source gives an ongoing per-week or per-kilolitre carting cost that could support an independent estimate without labelling it as inference rather than fact.",
+      "verification_notes": "Per Silence Handling: this gap is logged because it is tied to a specific question asked, not treated as proof that no such total exists or that carting has been cheap. Next step: a GIPA (Government Information Public Access) request to Kempsey Shire Council for total water-carting expenditure for Willawarrin and Bellbrook, by financial year, would resolve this directly - council finance records almost certainly hold this even where it has not been publicly summarised. Council's annual financial statements / operational plan reports may also itemise water-carting costs and would be worth checking directly rather than via search.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Records an evidence gap and a concrete next step, not a fact."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T13:30:00Z"
     }
   ]
 }

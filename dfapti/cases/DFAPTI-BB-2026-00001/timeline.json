@@ -31,6 +31,18 @@
         "E-010"
       ],
       "status_change": "None"
+    },
+    {
+      "date": "2026-07-23",
+      "event": "Pursued five more genuinely distinct paths after being pushed to actually take 'all paths', not a couple: (1) root cause - confirmed the iron/manganese issue is natural, drought/low-flow driven, distinct from separate historic Hillgrove mining contamination further upstream (E-011); (2) the specific ADWG guideline-exceedance claim was re-tested and could not be independently reproduced on a second search - held at LOW rather than accepted or discarded (E-012); (3) discovered and distinguished a separate $52.9 million Kempsey/Frederickton/Smithtown/Gladstone water project from the Willawarrin-specific plant, preventing the two being conflated (E-013); (4) resolved the previously-open $4M/$8M discrepancy in E-007 - two independent sources confirm it is the same project, which slipped from a 2024 target to 'early 2026' while roughly doubling in cost (E-014, supersedes E-007); (5) found the NSW Audit Office's own 'Local government 2025' report documenting a statewide ~$1 billion rural/regional council water-infrastructure funding gap, placing Willawarrin's situation within an audited systemic pattern rather than an isolated case (E-015).",
+      "evidence_ids": [
+        "E-011",
+        "E-012",
+        "E-013",
+        "E-014",
+        "E-015"
+      ],
+      "status_change": "None"
     }
   ]
 }

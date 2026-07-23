@@ -139,7 +139,7 @@
         "score": 0,
         "rationale": "Single news source only; primary 2020 funding announcement not yet independently located."
       },
-      "superseded_by": null,
+      "superseded_by": "E-014",
       "recorded_at": "2026-07-23T13:30:00Z"
     },
     {
@@ -201,6 +201,106 @@
       },
       "superseded_by": null,
       "recorded_at": "2026-07-23T20:00:00Z"
+    },
+    {
+      "evidence_id": "E-011",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": null,
+      "document_title": "Root cause: naturally occurring iron/manganese exacerbated by drought/bushfire/low-flow (distinct from separate upstream mining contamination)",
+      "publication_date": null,
+      "capture_date": "2026-07-23T22:00:00Z",
+      "source_url": null,
+      "classification": "HELD",
+      "confidence": "MEDIUM",
+      "summary": "Search-corroborated explanation of root cause: Willawarrin/Bellbrook's recurring trucked-water episodes trace to naturally occurring iron and manganese in the Macleay River, which become concentrated enough to breach usability during low river flow following drought and bushfire. This is confirmed as a distinct issue from the separate, well-documented historic arsenic/antimony contamination further upstream in the Macleay catchment from 19th/20th-century Hillgrove mine tailings (checked earlier in this investigation, 2026-07-23) - the two are different contaminants with different sources, and should not be conflated.",
+      "verification_notes": "HELD rather than ACCEPTED: the general mechanism (drought/bushfire -> low flow -> concentrated iron/manganese) is corroborated across independent search results, but no single primary document (e.g. a specific NSW Health or council water-quality report) has been directly cited yet. A claim that this specifically breached the Australian Drinking Water Guidelines was found in one search pass but could not be reproduced in a second, independent search - see E-012.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Mechanism corroborated across search results but not yet tied to one specific primary document."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T22:00:00Z"
+    },
+    {
+      "evidence_id": "E-012",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": null,
+      "document_title": "Claimed ADWG (Australian Drinking Water Guidelines) exceedance - single-source, not independently reproduced",
+      "publication_date": null,
+      "capture_date": "2026-07-23T22:00:00Z",
+      "source_url": null,
+      "classification": "HELD",
+      "confidence": "LOW",
+      "summary": "One search pass produced the specific claim that 'low river flow led to the water quality at Willawarrin moving outside of the Australian Drinking Water Guidelines.' A second, independent search on the same question did not reproduce this specific claim - it returned only general characterisations ('unable to treat water to a safe and acceptable level') without the specific ADWG reference. Per the cross-reference standard used throughout this register, a claim needs two independent confirmations to move to ACCEPTED; this one does not yet clear that bar.",
+      "verification_notes": "Held at LOW rather than discarded, since the claim is plausible and consistent with E-011's confirmed mechanism. Next step: locate the specific NSW Health or council water-quality test report (not a promotional project page) that would state an actual guideline exceedance with figures, or attempt the search again with different terms.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Single-source claim, not independently reproduced on a second search."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T22:00:00Z"
+    },
+    {
+      "evidence_id": "E-013",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "NSW Government / National Water Grid Authority",
+      "document_title": "$52.9 million Kempsey water infrastructure project (National Water Grid Authority) - a separate, distinct project from the Willawarrin plant",
+      "publication_date": "2025-03-01",
+      "capture_date": "2026-07-23T22:00:00Z",
+      "source_url": "https://www.nationalwatergrid.gov.au/projects/kempsey-water-treatment-plant",
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "A separate $52.9 million water infrastructure project, announced March 2025, is jointly funded by the Australian Government's National Water Grid Fund ($12.5m), the NSW Government's Safe and Secure Water Program ($13.2m) and Kempsey Shire Council ($27.1m). This project delivers a new treatment plant serving more than 18,000 residents of Kempsey township, Frederickton, Smithtown and Gladstone. It is a genuinely distinct project from the $8 million Willawarrin plant (E-003, E-004) - different funding sources, different scale, different communities served. Recorded here specifically to prevent the two projects being conflated in this case.",
+      "verification_notes": "Cross-confirmed via the National Water Grid Authority's own project page and joint ministerial media releases (Minister Plibersek / NSW Government), both giving consistent funding figures, communities served, and announcement date.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Verified via independent cross-reference of government sources; not yet independently fetched and hashed."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T22:00:00Z"
+    },
+    {
+      "evidence_id": "E-014",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "NSW Government / Kempsey Shire Council",
+      "document_title": "Willawarrin plant: original $4 million/2024 completion target grew to $8 million/early 2026 - now independently confirmed as the same project",
+      "publication_date": null,
+      "capture_date": "2026-07-23T22:00:00Z",
+      "source_url": "https://www.pumpindustry.com.au/4m-willawarrin-water-treatment-plant-nearing-tender-stage/",
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "This entry resolves the open question in E-007. Two independent sources (Pump Industry Magazine's '$4M Willawarrin water treatment plant nearing tender stage' article, and the Macleay Argus's 'Willawarrin's new water treatment plant construction set for 2025' article) both confirm the Willawarrin plant was the SAME project throughout: originally budgeted at $4 million with a 2024 completion target, the project's scope and cost grew to $8 million (E-003/E-004) with completion retargeted to 'early 2026'. This is a documented roughly two-year schedule slip and doubling of project cost for the same remedy, not two different projects or funding rounds.",
+      "verification_notes": "Cross-confirmed across two independent industry/media sources describing the same project's history consistently. This upgrades E-007's classification: the $4M/$8M figures are now confirmed to refer to the same project's early and later stages, not an unresolved discrepancy.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Cross-confirmed via two independent industry/media sources; not yet independently fetched and hashed."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T22:00:00Z"
+    },
+    {
+      "evidence_id": "E-015",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "NSW Audit Office",
+      "document_title": "Local government 2025 (NSW Audit Office performance audit)",
+      "publication_date": "2026-01-01",
+      "capture_date": "2026-07-23T22:00:00Z",
+      "source_url": "https://www.audit.nsw.gov.au/our-work/reports/local-government-2025",
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "The NSW Auditor-General's own 'Local government 2025' report found that two regional and 13 rural NSW councils operating water utilities recorded operating losses (rising to 30 councils, 10 regional and 20 rural, once grant revenue is excluded). The report estimates almost $1 billion is required across NSW to keep council-run water supply infrastructure at agreed service levels - an estimate that has grown 161% since 2021 - and states that even where operating costs are covered, councils are unlikely to generate enough revenue to fund infrastructure upgrades without grant funding, which the report identifies as the primary funding source for water infrastructure generally. This places Willawarrin's reliance on NSW Government/Commonwealth grant funding, and its multi-year timeline, within a documented, audited statewide pattern rather than an isolated local circumstance. The report was not searched to confirm whether Kempsey Shire Council is individually named among the councils recording losses - this specific attribution is not yet verified and is not claimed here.",
+      "verification_notes": "Primary source: the NSW Audit Office's own report page and its Parliament tabling PDF. Cross-confirmed via consistent reporting of the same figures ($1 billion, 161% increase, loss-making council counts) across LGNSW and independent regional media coverage.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Primary source located and cross-confirmed; not yet independently fetched and hashed. Kempsey-specific attribution explicitly not verified."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T22:00:00Z"
     }
   ]
 }

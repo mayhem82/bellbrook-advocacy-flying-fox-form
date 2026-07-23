@@ -339,8 +339,48 @@
         "score": 0,
         "rationale": "Records a genuine coverage gap and a concrete next step, not a fact about Bellbrook's actual water safety."
       },
-      "superseded_by": null,
+      "superseded_by": "E-018",
       "recorded_at": "2026-07-23T22:45:00Z"
+    },
+    {
+      "evidence_id": "E-018",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": null,
+      "document_title": "Bellbrook DOES have its own dedicated 2009 water treatment plant, built for Hillgrove arsenic/heavy metal contamination - corrects E-017's gap",
+      "publication_date": "2009-01-01",
+      "capture_date": "2026-07-23T23:15:00Z",
+      "source_url": null,
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "In 2005, Bellbrook's raw water supply was found to be contaminated by heavy metals and arsenic originating from former mines in the Hillgrove area (upstream in the Macleay catchment). By 2008 the contamination was severe enough that water had to be trucked into the town. A dedicated $700,000 water treatment plant was installed in Bellbrook in 2009 specifically to address this contamination. This corrects the gap logged in E-017: Bellbrook does have its own named, funded capital project distinct from Willawarrin's - it is simply a much smaller, older (2009) plant addressing a different specific contaminant (arsenic/heavy metals from Hillgrove) than the iron/manganese problem behind the 2020 and 2023 crises (E-001, E-002).",
+      "verification_notes": "Cross-confirmed via two independent search passes returning consistent detail (2005 contamination discovery, 2008 trucking, 2009 plant installation, $700,000 cost, Hillgrove/arsenic cause), including a Wikipedia article on Bellbrook itself. Meets the two-independent-source bar for ACCEPTED under this register's standard.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Cross-confirmed across two independent searches; not yet independently fetched and hashed against a single primary document."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T23:15:00Z"
+    },
+    {
+      "evidence_id": "E-019",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": null,
+      "document_title": "Open question: did the 2009 Bellbrook plant fail, or was 2020 a genuinely separate problem it was never designed for?",
+      "publication_date": null,
+      "capture_date": "2026-07-23T23:15:00Z",
+      "source_url": null,
+      "classification": "PENDING",
+      "confidence": "LOW",
+      "summary": "E-018 establishes Bellbrook had a dedicated treatment plant since 2009 for arsenic/heavy metal contamination. E-001 establishes Bellbrook still went through 'many months' of trucked water in 2020, attributed to iron and manganese, not arsenic. Two explanations are both consistent with the evidence so far and neither is yet confirmed: (a) the 2009 plant was built to treat arsenic/heavy metals specifically and was never designed to handle iron/manganese, so the 2020 crisis is a genuinely separate problem the existing plant could not address; or (b) the 2009 plant degraded, was decommissioned, or became inadequate over time and something has changed since 2009. Which of these is true has a direct bearing on whether Bellbrook's current water security depends on ageing single-purpose infrastructure, and it has not been established either way.",
+      "verification_notes": "Logged as an open question rather than resolved either way, consistent with Contradiction Preservation - the two explanations are not merged into one assumed answer. Next step: find the 2009 plant's original design specification or scope (was iron/manganese ever in scope?), or find any reporting on the plant's current operating status.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Records an open, unresolved question rather than a fact."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T23:15:00Z"
     }
   ]
 }

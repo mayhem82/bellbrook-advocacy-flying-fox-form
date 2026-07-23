@@ -52,6 +52,15 @@
         "E-017"
       ],
       "status_change": "None"
+    },
+    {
+      "date": "2026-07-23",
+      "event": "Followed the Bellbrook gap flagged in the previous pass. Found and cross-confirmed (two independent sources) that Bellbrook DOES have its own dedicated water treatment plant, installed in 2009 for $700,000, built after 2005 discovery of Hillgrove-mine-sourced arsenic/heavy metal contamination and a 2008 trucking episode (E-018) - correcting the prior pass's gap. However this raises a new, genuinely unresolved question: the 2009 plant addressed arsenic, not the iron/manganese that caused the 2020 and 2023 crises - it's unclear whether the 2009 plant was simply never designed for that problem, or whether it has since degraded (E-019). Both explanations remain open.",
+      "evidence_ids": [
+        "E-018",
+        "E-019"
+      ],
+      "status_change": "None"
     }
   ]
 }

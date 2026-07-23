@@ -501,6 +501,86 @@
       },
       "superseded_by": null,
       "recorded_at": "2026-07-23T20:33:05Z"
+    },
+    {
+      "evidence_id": "E-026",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "Kempsey Shire Council",
+      "document_title": "Council's own page confirms Willawarrin, Bellbrook and the Thunggutti Aboriginal Community are three separate named water supply systems - resolves E-016",
+      "publication_date": null,
+      "capture_date": "2026-07-23T21:36:13Z",
+      "source_url": "https://www.kempsey.nsw.gov.au/Residents/Water-sewerage/Water-supply-quality",
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "Kempsey Shire Council's own 'Water supply & quality' page states Council manages eight water supply systems in total: Kempsey and the Lower Macleay (Frederickton, Smithtown, Gladstone), the coastal villages (Crescent Head, Hat Head, South West Rocks, Stuarts Point), and the upriver villages of Willawarrin, Bellbrook, and the Thunggutti Aboriginal Community - with separate supply system sub-plans for the Willawarrin and Bellbrook systems specifically. This directly confirms (rather than merely infers, as E-016 previously did) that Willawarrin and Bellbrook are distinct reticulation schemes. It also surfaces a third named community in the same upriver group - the Thunggutti Aboriginal Community - not previously identified in this investigation; whether it has experienced the same iron/manganese trucking crises is not yet investigated (see E-028).",
+      "verification_notes": "Cross-confirmed across two independent search passes, both citing the council's own water-supply-quality page and returning consistent detail (eight systems, same names, 'separate supply system sub-plans' language). This resolves E-016's open inference into a directly-sourced fact.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Cross-confirmed via two independent searches of the council's own page; not yet independently fetched and hashed."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T21:36:13Z"
+    },
+    {
+      "evidence_id": "E-027",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "Kempsey Shire Council",
+      "document_title": "The ADWG guideline-exceedance claim has now been independently reproduced - resolves E-012",
+      "publication_date": null,
+      "capture_date": "2026-07-23T21:36:13Z",
+      "source_url": null,
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "E-012 logged the claim 'low river flow led to the water quality at Willawarrin moving outside of the Australian Drinking Water Guidelines' as HELD, because it appeared in only one search pass and could not be reproduced in a second, independent pass at that time. It has now reproduced again, in near-identical wording, in a subsequent independent search pass this session - meeting this register's two-independent-confirmation bar for ACCEPTED. The general fact of an ADWG guideline exceedance at Willawarrin (tied to low river flow) is now accepted. The specific numeric guideline value(s) exceeded are still not established - that narrower question remains open (see E-010).",
+      "verification_notes": "Cross-confirmed: the exact phrase 'water quality at Willawarrin moving outside of the Australian Drinking Water Guidelines' appeared independently in two separate search passes conducted in different sessions, both plausibly sourced from Kempsey Shire Council's own project/fact-sheet material. Promotes E-012 from HELD to ACCEPTED for the general claim only, not for specific figures.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Same specific claim reproduced across two independent search passes; not yet independently fetched and hashed against one named primary document."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T21:36:13Z"
+    },
+    {
+      "evidence_id": "E-028",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": null,
+      "document_title": "New, genuinely unexplored path: the Thunggutti Aboriginal Community shares the same upriver water-supply group as Willawarrin and Bellbrook",
+      "publication_date": null,
+      "capture_date": "2026-07-23T21:36:13Z",
+      "source_url": null,
+      "classification": "PENDING",
+      "confidence": "LOW",
+      "summary": "E-026 establishes that Kempsey Shire Council groups Willawarrin, Bellbrook, and the Thunggutti Aboriginal Community together as the Shire's 'upriver villages', each with its own water supply system. This investigation has not yet searched specifically for whether the Thunggutti Aboriginal Community has experienced the same iron/manganese trucked-water crises as Willawarrin and Bellbrook, whether it has its own treatment plant or remedy, or its current water security status. Logged as a new, specific open path rather than left unexamined, consistent with an all-paths-taken standard.",
+      "verification_notes": "This is a newly surfaced thread, not yet searched. Next step: search directly for 'Thunggutti Aboriginal Community water supply Kempsey' and equivalent terms in a future pass.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Records a newly identified, not-yet-investigated path - not a fact."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T21:36:13Z"
+    },
+    {
+      "evidence_id": "E-029",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "Kempsey Shire Council",
+      "document_title": "As of the November 2025 Council Meeting, the Willawarrin plant was still described as a planned/in-progress project - no completion reported yet",
+      "publication_date": "2025-11-18",
+      "capture_date": "2026-07-23T21:36:13Z",
+      "source_url": "https://www.kempsey.nsw.gov.au/Your-Council/Council-news-public-notices/Council-news-updates/November-Council-Meeting-2025-wrap",
+      "classification": "HELD",
+      "confidence": "LOW",
+      "summary": "Council's own coverage of its 18 November 2025 Ordinary Meeting, presenting the 2024-25 Annual Report, lists the new Willawarrin Water Treatment Plant among the Shire's current/planned water infrastructure projects - it is not described as completed. This is a later negative-result data point than the 'Autumn 2025' community update previously found (E-005), but still does not confirm or rule out completion by the 'early 2026' target - it only shows the project had not been reported finished as of that November 2025 meeting.",
+      "verification_notes": "Single source for this specific meeting summary; general tenor (project still listed as underway, not completed) is consistent with E-005's still-open gap rather than resolving it. Held at LOW rather than treated as confirming ongoing delay.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Single council news item; narrows but does not resolve E-005's completion-status gap."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T21:36:13Z"
     }
   ]
 }

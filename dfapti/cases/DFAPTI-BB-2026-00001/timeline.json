@@ -74,6 +74,17 @@
         "E-025"
       ],
       "status_change": "None"
+    },
+    {
+      "date": "2026-07-23",
+      "event": "Second ongoing-workflow pass. Two prior open/held items were resolved to ACCEPTED on independent re-confirmation: Council's own 'Water supply & quality' page directly confirms Willawarrin, Bellbrook, and the Thunggutti Aboriginal Community are three separate named water supply systems with their own sub-plans, upgrading E-016's inference to a sourced fact (E-026); and the specific ADWG guideline-exceedance claim from E-012 reproduced again on an independent search, clearing the two-confirmation bar for the general claim (though specific guideline figures remain unconfirmed) (E-027). A genuinely new, previously unexamined path was surfaced and logged rather than chased down blind: the Thunggutti Aboriginal Community shares the same upriver supply grouping as Willawarrin/Bellbrook and has not yet been investigated for the same trucked-water history (E-028). The plant-completion gap (E-005) was narrowed with a later data point - still listed as a planned/in-progress project as of the November 2025 Council Meeting, not yet reported complete (E-029). The school-launch detail and cost/GIPA-alternative searches did not turn up anything solid enough to log this pass.",
+      "evidence_ids": [
+        "E-026",
+        "E-027",
+        "E-028",
+        "E-029"
+      ],
+      "status_change": "None"
     }
   ]
 }

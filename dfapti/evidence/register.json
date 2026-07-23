@@ -381,6 +381,126 @@
       },
       "superseded_by": null,
       "recorded_at": "2026-07-23T23:15:00Z"
+    },
+    {
+      "evidence_id": "E-020",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "NSW Government / Kempsey Shire Council",
+      "document_title": "Willawarrin plant: population served (~130 residents) and an internally inconsistent construction-duration estimate",
+      "publication_date": null,
+      "capture_date": "2026-07-23T20:33:05Z",
+      "source_url": "https://water.dpie.nsw.gov.au/news/sod-turns-on-new-$8-million-willawarrin-water-treatment-plant",
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "Additional detail from the same primary government announcement already cited at E-003: the plant is described as providing high-quality drinking water for Willawarrin's approximately 130 residents 'for decades to come'. The same announcement material states construction would get underway in mid-2025 and take approximately 18 months to complete - which would place completion around late 2026, not the 'early 2026' target stated on the council's own current-works page (E-004) and repeated elsewhere. This is recorded as an internal inconsistency in the project's own public messaging, not resolved into a single assumed completion date.",
+      "verification_notes": "Population figure and '18 months from mid-2025' construction estimate reproduced consistently across two independent WebSearch passes, both attributable to the same NSW Government/council announcement material already used for E-003. The 18-months-vs-early-2026 discrepancy is flagged per Contradiction Preservation rather than silently reconciled - see E-005 for the still-open completion-status gap this bears on.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Cross-confirmed via two independent search passes attributable to the same primary government release; not yet independently fetched and hashed."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T20:33:05Z"
+    },
+    {
+      "evidence_id": "E-021",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "Kempsey Shire Council",
+      "document_title": "Bellbrook plant's confirmed design scope: arsenic removal specifically, with antimony also monitored to ADWG - construction year given as both 2009 (E-018) and 2010 (this entry), unresolved",
+      "publication_date": null,
+      "capture_date": "2026-07-23T20:33:05Z",
+      "source_url": "https://www2.kempsey.nsw.gov.au/environment/estuary-management/upper-macleay.html",
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "Kempsey Shire Council's own 'Heavy metals in the Upper Macleay River' page states a water treatment plant was constructed at Bellbrook 'that had the capacity to remove arsenic from the ground water', and that the plant 'ensures that the water is processed in accordance with the Australian Drinking Water Guidelines (ADWG), including maintaining arsenic and antimony levels at below the guideline levels'. This directly confirms the plant's stated design scope is arsenic (and antimony) removal - it is not described anywhere in this source as addressing iron or manganese. This is relevant to the open question at E-019.",
+      "verification_notes": "Cross-confirmed via two independent search passes returning consistent wording. One point is NOT resolved and is preserved as a contradiction rather than picked: this source describes the plant as built 'in 2010', while E-018's two independent sources both said 2009. Both are logged; neither is treated as authoritative over the other without a primary document confirming the exact commissioning date.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Cross-confirmed across two independent searches of the council's own page; not yet independently fetched and hashed. Construction year conflicts with E-018 and is left unresolved."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T20:33:05Z"
+    },
+    {
+      "evidence_id": "E-022",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "Southern Cross University / Save Our Macleay River citizen science group",
+      "document_title": "Seven years of independent citizen-science water quality monitoring at Bellbrook Bridge (2016-2023)",
+      "publication_date": null,
+      "capture_date": "2026-07-23T20:33:05Z",
+      "source_url": "https://www.scu.edu.au/news/2024/citizen-science-and-mining-impact-on-macleay-river/",
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "Independent of Kempsey Shire Council: from 2016 to 2023, the Save Our Macleay River (SOMR) citizen-science group collaborated with Southern Cross University, sampling water approximately weekly at Bellbrook Bridge (and daily during the 2020 post-bushfire flood event). Antimony concentrations were found to be mostly below guideline values across this monitoring period. The same research estimated it could take 600-1000 years for the river to leach back to pre-mining (historic Hillgrove mine) contamination levels - i.e. the underlying contamination source is effectively permanent on any human timescale, making ongoing treatment infrastructure (rather than a one-off remediation) the only realistic long-term response.",
+      "verification_notes": "Source is an academic/university news item describing a published multi-year citizen-science monitoring program, independent of council self-reporting. Cross-confirmed via two independent search passes returning consistent detail (SOMR, 2016-2023, weekly sampling, Bellbrook Bridge location, 600-1000 year estimate).",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Independent academic source, cross-confirmed via two search passes; not yet independently fetched and hashed."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T20:33:05Z"
+    },
+    {
+      "evidence_id": "E-023",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "NSW Audit Office",
+      "document_title": "Support for regional town water infrastructure (NSW Audit Office performance audit, 2020) - a distinct, earlier report from E-015",
+      "publication_date": "2020-01-01",
+      "capture_date": "2026-07-23T20:33:05Z",
+      "source_url": "https://www.audit.nsw.gov.au/our-work/reports/support-for-regional-town-water-infrastructure",
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "A separate, earlier NSW Auditor-General performance audit (2020) found that the then-Department of Planning, Industry and Environment 'has not effectively supported or overseen town water infrastructure planning in regional NSW since at least 2014', and lacked a strategic, evidence-based approach to target investment in town water infrastructure. This is a distinct report from E-015 ('Local government 2025') - this one examines the state department's own oversight function specifically, predates Willawarrin/Bellbrook's 2020 crisis (E-001) by only months, and provides systemic context for why a known, recurring town-level water-quality problem could go unresolved for years before the current $8 million plant was funded.",
+      "verification_notes": "Primary source: the Audit Office's own report page. Cross-confirmed via consistent reporting of the same 'since at least 2014' finding across independent search results. Not yet confirmed whether this 2020 audit specifically named Kempsey Shire Council or Willawarrin - that specific attribution is not claimed here, consistent with the same caveat already logged at E-015 for the later report.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Primary source located and cross-confirmed; not yet independently fetched and hashed. Council/town-specific attribution not verified."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T20:33:05Z"
+    },
+    {
+      "evidence_id": "E-024",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": null,
+      "document_title": "E-019 update: Bellbrook plant's confirmed arsenic/antimony-specific scope (E-021) supports explanation (a), but does not conclusively prove it",
+      "publication_date": null,
+      "capture_date": "2026-07-23T20:33:05Z",
+      "source_url": null,
+      "classification": "HELD",
+      "confidence": "MEDIUM",
+      "summary": "E-021 confirms the Bellbrook plant's own stated purpose is arsenic removal and ADWG compliance for arsenic/antimony specifically - iron and manganese are not mentioned anywhere in that description. This is consistent with, and lends support to, explanation (a) in E-019 (the 2009/2010 plant was never designed to handle iron/manganese, so the 2020 and 2023 crises are a genuinely separate problem outside its scope). However, no source found states this exclusion directly (e.g. an explicit design specification listing iron/manganese as out of scope), so explanation (b) in E-019 (degradation/inadequacy over time) is not yet ruled out. E-019 remains open; this entry narrows it without closing it.",
+      "verification_notes": "Recorded per Contradiction Preservation: this is an inference from what a source does say (arsenic/antimony scope) rather than a direct statement of what it excludes. Kept HELD rather than promoted to ACCEPTED for that reason.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "An inference bridging E-019 and E-021, not itself a directly sourced fact."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T20:33:05Z"
+    },
+    {
+      "evidence_id": "E-025",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": null,
+      "document_title": "Located the actual public documents that would resolve E-008/E-010/E-012, but this sandbox cannot fetch them - a concrete non-GIPA next step",
+      "publication_date": null,
+      "capture_date": "2026-07-23T20:33:05Z",
+      "source_url": "https://www.kempsey.nsw.gov.au/files/sharedassets/public/v/1/docs/departments/water-amp-sewer/kempsey-shire-council-annual-water-qualty-report-2020-2021.pdf.pdf",
+      "classification": "PENDING",
+      "confidence": "LOW",
+      "summary": "Kempsey Shire Council publishes its own Drinking Water Management System Annual Reports as public PDFs, at least for 2018/19, 2019/20 and 2020/21 (URLs located this pass). These are exactly the kind of primary document that would contain specific water-quality test results (bearing on E-010/E-012's ADWG-exceedance question) and, potentially, cost figures. This is a genuinely public document, not one requiring a GIPA request - the prior suggestion at E-008 to use GIPA is superseded by this more direct route. However, this sandbox's outbound network access blocks kempsey.nsw.gov.au directly (confirmed via a direct curl attempt returning HTTP 403 from the proxy), so the PDF content itself could not be extracted this pass.",
+      "verification_notes": "Logged per Silence Handling: the gap is the sandbox's fetch capability, not an absence of the underlying document. Next step: fetch and read these PDFs directly (from an environment with unrestricted access to kempsey.nsw.gov.au), rather than repeating a GIPA request that was already rejected as not the right path.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Records a capability gap and a concrete, already-located next step, not a fact."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T20:33:05Z"
     }
   ]
 }

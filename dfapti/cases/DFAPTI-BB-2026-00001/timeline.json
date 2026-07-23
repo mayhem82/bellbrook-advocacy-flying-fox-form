@@ -61,6 +61,19 @@
         "E-019"
       ],
       "status_change": "None"
+    },
+    {
+      "date": "2026-07-23",
+      "event": "First pass of the ongoing DFAPTI workflow for this case. Six new findings: (1) additional detail on the Willawarrin plant (~130 residents served) alongside an internally inconsistent construction-duration estimate in the project's own public material - '18 months from mid-2025' implies late 2026, not the 'early 2026' target stated elsewhere, logged as a discrepancy rather than resolved (E-020); (2) confirmed the Bellbrook plant's own stated design scope is arsenic/antimony removal specifically, with iron/manganese not mentioned - relevant to E-019 - while also surfacing an unresolved 2009-vs-2010 construction-year discrepancy against E-018 (E-021); (3) found seven years (2016-2023) of independent citizen-science water monitoring at Bellbrook Bridge run with Southern Cross University, including an estimate that the river needs 600-1000 years to naturally leach back to pre-mining contamination levels - i.e. the contamination source is effectively permanent (E-022); (4) found a distinct, earlier (2020) NSW Audit Office performance audit finding the responsible state department had not effectively overseen regional town water infrastructure planning since at least 2014 - separate from E-015's 2025 report (E-023); (5) narrowed (without closing) E-019's open question using E-021's finding (E-024); (6) located the actual public council water-quality annual reports that would resolve E-008/E-010/E-012, establishing a concrete non-GIPA next step, though this sandbox cannot fetch kempsey.nsw.gov.au directly to read them (confirmed via a direct curl returning HTTP 403) (E-025).",
+      "evidence_ids": [
+        "E-020",
+        "E-021",
+        "E-022",
+        "E-023",
+        "E-024",
+        "E-025"
+      ],
+      "status_change": "None"
     }
   ]
 }

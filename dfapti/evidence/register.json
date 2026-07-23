@@ -301,6 +301,46 @@
       },
       "superseded_by": null,
       "recorded_at": "2026-07-23T22:00:00Z"
+    },
+    {
+      "evidence_id": "E-016",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": null,
+      "document_title": "Bellbrook and Willawarrin run separate water supply schemes - the $8M plant is Willawarrin-specific, not shared",
+      "publication_date": null,
+      "capture_date": "2026-07-23T22:45:00Z",
+      "source_url": null,
+      "classification": "HELD",
+      "confidence": "MEDIUM",
+      "summary": "Search results describing water restrictions across Kempsey Shire refer to 'schemes in Bellbrook and Willawarrin' as distinct entries, and no source found treats them as a single shared reticulation network. This matters directly: the $8 million Willawarrin Water Treatment Plant (E-003, E-004, E-014) is described everywhere as a Willawarrin-specific project - none of the project pages, ministerial releases, or funding announcements name Bellbrook as a beneficiary of that plant. If the two schemes are genuinely separate, the Willawarrin plant does not by itself resolve Bellbrook's water security, despite Bellbrook having been equally affected by the 2020 trucking crisis (E-001).",
+      "verification_notes": "HELD rather than ACCEPTED: the separateness of the two schemes is inferred from consistent phrasing across sources rather than one primary document explicitly stating 'Bellbrook and Willawarrin are on separate reticulation systems.' Needs direct confirmation from Kempsey Shire Council's water and sewer scheme documentation.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Inferred from consistent phrasing across sources, not one explicit primary statement of scheme separation."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T22:45:00Z"
+    },
+    {
+      "evidence_id": "E-017",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": null,
+      "document_title": "No Bellbrook-specific water security project found, and no reporting on Bellbrook's water status since June 2020 (search coverage gap)",
+      "publication_date": null,
+      "capture_date": "2026-07-23T22:45:00Z",
+      "source_url": null,
+      "classification": "PENDING",
+      "confidence": "LOW",
+      "summary": "Searched specifically for a Bellbrook-equivalent to the Willawarrin Water Treatment Plant, and for any update on Bellbrook's water supply status since the June 2020 return-to-river-supply announcement (E-001). Found neither. Every dedicated water-security capital project located in this investigation (the $8m Willawarrin plant, the separate $52.9m Kempsey/Frederickton/Smithtown/Gladstone project - E-013) names Willawarrin or the larger towns, never Bellbrook. The last public information found about Bellbrook's water supply specifically is from June 2020.",
+      "verification_notes": "Per Silence Handling, this is logged as an open gap tied to a specific search, not as proof Bellbrook has no fix or is currently unsafe - it may be on a scheme small enough not to warrant separate media coverage, or a fix may exist that simply wasn't surfaced by these search terms. Next step: check Kempsey Shire Council's 'Current works' and 'Major projects' pages directly for any Bellbrook-named item, and check the council's Drinking Water Management System annual report (referenced generally in an earlier pass) for a Bellbrook-specific water quality entry.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Records a genuine coverage gap and a concrete next step, not a fact about Bellbrook's actual water safety."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-23T22:45:00Z"
     }
   ]
 }

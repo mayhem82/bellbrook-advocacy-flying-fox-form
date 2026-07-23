@@ -43,6 +43,15 @@
         "E-015"
       ],
       "status_change": "None"
+    },
+    {
+      "date": "2026-07-23",
+      "event": "Pursued the Bellbrook-specific path (this case's title names both towns, but nearly all evidence gathered so far was Willawarrin-specific). Found that Bellbrook and Willawarrin run on separate water schemes (E-016) - meaning the $8 million Willawarrin plant does not, on its own, resolve Bellbrook's water security. No Bellbrook-specific capital project was found anywhere, and no public reporting on Bellbrook's water supply status was found more recent than the June 2020 return-to-supply announcement (E-017). This is a significant, previously-unexamined gap: two towns hit by the same 2020 crisis, but only one has a named, funded, publicly-tracked remedy.",
+      "evidence_ids": [
+        "E-016",
+        "E-017"
+      ],
+      "status_change": "None"
     }
   ]
 }

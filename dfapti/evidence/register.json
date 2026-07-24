@@ -661,6 +661,46 @@
       },
       "superseded_by": null,
       "recorded_at": "2026-07-24T00:36:08Z"
+    },
+    {
+      "evidence_id": "E-034",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "Kempsey Shire Council / The Macleay Argus",
+      "document_title": "The sitting Mayor of Kempsey Shire Council is herself a Willawarrin resident - a structural fact, recorded neutrally, parallel to E-009",
+      "publication_date": "2025-03-26",
+      "capture_date": "2026-07-24T01:36:04Z",
+      "source_url": "https://www.kempsey.nsw.gov.au/Your-Council/Council-news-public-notices/Council-news-updates/20250326-Mayors-Column",
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "Mayor Kinne Ring, elected a Kempsey Shire councillor in July 2022 and elected Mayor in October 2024, is herself a resident of Willawarrin. Her own 26 March 2025 Mayor's Column ('Advocating for our needs'), written on the occasion of turning the first sod on the $8 million Willawarrin Water Treatment Plant, notes this directly and describes her own experience of the unreliable bore water supply. This is recorded as a structural/temporal fact only, in the same manner as E-009 (the Member for Oxley's concurrent water-minister tenure) - it is not a finding about any action taken or not taken by Mayor Ring, and no such finding is made here.",
+      "verification_notes": "The Willawarrin-residency fact and Mayor Ring's council tenure dates (councillor from July 2022, Mayor from October 2024) were cross-confirmed across two independent search passes.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Cross-confirmed via two independent search passes; not yet independently fetched and hashed."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-24T01:36:04Z"
+    },
+    {
+      "evidence_id": "E-035",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "Kempsey Shire Council",
+      "document_title": "Independent corroboration of the systemic funding-gap narrative (E-015, E-023): the Mayor's own July 2025 mayoral minute on cost shifting onto local government",
+      "publication_date": "2025-07-01",
+      "capture_date": "2026-07-24T01:36:04Z",
+      "source_url": "https://www.kempsey.nsw.gov.au/Your-Council/Council-news-public-notices/Council-news-updates/20260612-Mayors-Column",
+      "classification": "HELD",
+      "confidence": "MEDIUM",
+      "summary": "In July 2025, Mayor Kinne Ring presented a mayoral minute stating that 'the relentless growth of cost shifting, combined with rate pegging and insufficient state and federal funding, continues to erode the financial sustainability of local government.' This is an independent source - the affected council's own elected leadership, not an audit office - making substantially the same systemic point already established via the NSW Audit Office's 2020 and 2025 reports (E-023, E-015): that funding structure, not any single local decision, is a recurring constraint on regional water/local-government infrastructure. Recorded as corroborating context, not as a claim about Willawarrin specifically - the minute addresses local government funding broadly.",
+      "verification_notes": "The July 2025 mayoral minute and its 'cost shifting... rate pegging... insufficient state and federal funding' wording were found via a single search pass, not yet independently reproduced on a second, separate search - held rather than accepted for that reason, consistent with this register's two-independent-confirmation standard. The full text of the June 2026 column that referenced it was not directly retrieved, only summarised via search synthesis.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Found via a single search pass, not yet cross-confirmed on a second independent search; underlying column/minute text not directly fetched (kempsey.nsw.gov.au blocked in this sandbox, per E-025)."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-24T01:36:04Z"
     }
   ]
 }

@@ -110,6 +110,15 @@
         "E-033"
       ],
       "status_change": "None"
+    },
+    {
+      "date": "2026-07-24",
+      "event": "Sixth ongoing-workflow pass. Specific ADWG concentration figures still weren't found. But a new independent-source (Mayor's Column / Macleay Argus) angle surfaced two genuine findings: the sitting Mayor of Kempsey Shire Council, Kinne Ring, is herself a Willawarrin resident - recorded as a structural fact only, parallel to E-009's Pavey finding, no allegation made (E-034); and Mayor Ring's own July 2025 mayoral minute on cost shifting onto local government independently echoes the same systemic funding-gap point already established via the NSW Audit Office reports (E-015, E-023) - held rather than accepted since it was found via only a single search pass this time (E-035).",
+      "evidence_ids": [
+        "E-034",
+        "E-035"
+      ],
+      "status_change": "None"
     }
   ]
 }

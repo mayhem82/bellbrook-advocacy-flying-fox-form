@@ -119,6 +119,14 @@
         "E-035"
       ],
       "status_change": "None"
+    },
+    {
+      "date": "2026-07-24",
+      "event": "Seventh ongoing-workflow pass. Re-checked E-035's cost-shifting claim on an independent search - it reproduced again with richer detail this time (councillors' unanimous support for the mayoral minute, an LGNSW figure of almost $500 per ratepayer annually in shifted costs statewide, and confirmation Kempsey Shire Council itself applied for a special rate variation to keep delivering services), clearing the two-confirmation bar and promoting it to ACCEPTED (E-036). Tried again for the NSW Audit Office's specific list of at-risk councils (Appendix 2 of 'Local government 2025') - still could not find the actual council names in that appendix, so Kempsey-specific attribution remains unverified exactly as already caveated at E-015.",
+      "evidence_ids": [
+        "E-036"
+      ],
+      "status_change": "None"
     }
   ]
 }

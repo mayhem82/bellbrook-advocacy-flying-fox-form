@@ -701,6 +701,26 @@
       },
       "superseded_by": null,
       "recorded_at": "2026-07-24T01:36:04Z"
+    },
+    {
+      "evidence_id": "E-036",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "Kempsey Shire Council / The Macleay Argus",
+      "document_title": "E-035's cost-shifting claim now independently reproduced, with richer detail: councillors' unanimous support, an LGNSW $500/ratepayer figure, and Kempsey's own special rate variation - promotes E-035 to ACCEPTED",
+      "publication_date": "2025-07-01",
+      "capture_date": "2026-07-24T02:35:09Z",
+      "source_url": "https://www.macleayargus.com.au/story/9022966/kempsey-shire-council-calls-for-reform-against-cost-shifting/",
+      "classification": "ACCEPTED",
+      "confidence": "HIGH",
+      "summary": "E-035's claim - Mayor Kinne Ring's July 2025 mayoral minute stating that 'the relentless growth of cost shifting, combined with rate pegging and insufficient state and federal funding, continues to erode the financial sustainability of local government' - has now been independently reproduced on a second search pass, meeting this register's cross-confirmation bar. Additional detail found this pass: Kempsey Shire councillors unanimously supported the minute, joining industry calls for reform; a report commissioned by Local Government NSW (LGNSW) found councils spend on average almost $500 per ratepayer annually covering costs shifted from state and federal governments; and Kempsey Shire Council itself was forced to apply for a special rate variation to continue delivering expected services. This directly ties the systemic funding-gap narrative (E-015, E-023) to Kempsey Shire Council specifically, via the council's own public position and its own funding measures - not an inference, but the council's own stated reasoning.",
+      "verification_notes": "The core cost-shifting quote was reproduced independently across two separate search passes with consistent wording, both attributable to Kempsey Shire Council's own July 2025 mayoral minute and reported by The Macleay Argus. This promotes E-035 from HELD to ACCEPTED for that core claim.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Core claim cross-confirmed via two independent search passes; not yet independently fetched and hashed against one named primary document."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-24T02:35:09Z"
     }
   ]
 }

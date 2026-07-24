@@ -641,6 +641,26 @@
       },
       "superseded_by": null,
       "recorded_at": "2026-07-23T23:35:37Z"
+    },
+    {
+      "evidence_id": "E-033",
+      "case_id": "DFAPTI-BB-2026-00001",
+      "source_authority": "Kempsey Shire Council",
+      "document_title": "Council's own 2020-21 Operational Plan budgeted $17.5 million for water supply that same financial year, while running a $3.2 million general fund deficit - financial context for the crisis year, not a carting-cost figure",
+      "publication_date": "2020-07-29",
+      "capture_date": "2026-07-24T00:36:08Z",
+      "source_url": "https://kempsey.nsw.gov.au/media-releases/2020/mr20200729.html",
+      "classification": "ACCEPTED",
+      "confidence": "MEDIUM",
+      "summary": "Kempsey Shire Council's own media release (29 July 2020, 'Council halves budget deficit with annual Operational Plan') states the 2020-21 Operational Plan budgeted $17.5 million for water supply operations, maintenance and capital works that financial year - the same year Willawarrin and Bellbrook returned to river supply after 'many months' of trucked water (E-001). The same Operational Plan reduced Council's forecast general fund deficit from an initial draft $7.6 million to a final $3.2 million. This is genuine financial context for the crisis period - a council operating with a multi-million-dollar general fund deficit while budgeting $17.5 million for water supply that year - but it is not a water-carting-specific cost figure and does not resolve E-008's still-open question about cumulative carting expenditure.",
+      "verification_notes": "The $17.5 million water-supply figure and the $7.6M-to-$3.2M deficit figures were reproduced consistently across two independent search passes, both attributable to the same council media release and its Operational Plan.",
+      "document_hash": null,
+      "proof_of_fact": {
+        "score": 0,
+        "rationale": "Cross-confirmed via two independent search passes attributable to the same primary council release; not yet independently fetched and hashed."
+      },
+      "superseded_by": null,
+      "recorded_at": "2026-07-24T00:36:08Z"
     }
   ]
 }

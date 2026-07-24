@@ -102,6 +102,14 @@
         "E-032"
       ],
       "status_change": "None"
+    },
+    {
+      "date": "2026-07-24",
+      "event": "Fifth ongoing-workflow pass. Tried fresh angles on the specific-year trucking claim (E-006) and the Bellbrook plant's original design spec (E-019) - neither turned up anything new beyond what's already recorded. A different angle on the carting-cost question (E-008) surfaced genuine, cross-confirmed financial context rather than the specific figure itself: Council's own 29 July 2020 media release shows the 2020-21 Operational Plan budgeted $17.5 million for water supply that financial year, while the same plan cut Council's forecast general fund deficit from $7.6 million to $3.2 million - the exact year of the Willawarrin/Bellbrook crisis. This does not resolve E-008's still-open cumulative carting-cost question, but it is genuine, sourced financial context for the period (E-033).",
+      "evidence_ids": [
+        "E-033"
+      ],
+      "status_change": "None"
     }
   ]
 }

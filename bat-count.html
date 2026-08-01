@@ -53,13 +53,13 @@ pre.record{white-space:pre-wrap;background:#faf8f2;border:1px solid var(--line);
 <header class="top"><div class="wrap"><a class="btn muted" href="bellbrook-portal.html" style="margin-bottom:14px">← Bellbrook Community Resilience Portal</a><h1>AUTOMATIC BAT FLY-OUT COUNTER</h1><p>Point the camera at the sky above the camp and let the tracker count bats as they fly overhead, building an evidence record of colony activity.</p></div></header>
 <main class="wrap">
 
-<section class="hero"><h2>COUNT THE EMERGENCE</h2><p>This tool watches for moving shapes crossing the sky and counts each one automatically as a bat flies overhead. It works best at dusk, held steady, pointed at open sky above the camp.</p></section>
+<section class="hero"><h2>COUNT AT DAWN OR DUSK</h2><p>This tool watches for moving shapes crossing the sky and counts each one automatically as a bat flies overhead. Count at dusk as the colony emerges, or at dawn as it returns to camp — these are the standard windows for flying-fox activity counts, held steady, pointed at open sky above the camp.</p></section>
 
 <section class="card">
 <h2>How it works</h2>
 <p>This is a motion-tracking counter, not a species classifier. It compares each camera frame with the moments before it, looks for dark shapes moving against the sky, follows each shape for a few frames so the same bat is not counted twice, and adds one to the automatic count the first time a shape is confirmed as a genuine, sustained movement.</p>
-<p>Because it tracks movement rather than recognising bats specifically, it can occasionally miscount — for example if two bats pass close together, if a bird, insect, or leaf crosses the frame, or if the camera itself moves. Treat the automatic count as an <strong>estimate</strong>. Use the +1 / −1 buttons to correct it from what you actually saw before saving the record. The saved record keeps both figures, consistent with how this portal separates direct observation from automated estimate.</p>
-<div class="warn"><strong>Best results:</strong> keep the phone still (a fence post, tripod, or windowsill helps), aim at open sky rather than trees or rooftops, and start counting just before the bats begin emerging.</div>
+<p>Because it tracks movement rather than recognising bats specifically, it can occasionally miscount — for example if two bats pass close together or the camera itself moves. Counting at dawn or dusk, rather than during the day, is what keeps this reliable: bats are essentially the only thing moving through the sky above the camp in those windows, so there is little else for the tracker to confuse them with. Treat the automatic count as an <strong>estimate</strong> all the same. Use the +1 / −1 buttons to correct it from what you actually saw before saving the record. The saved record keeps both figures, consistent with how this portal separates direct observation from automated estimate.</p>
+<div class="warn"><strong>Best results:</strong> count during the dawn return or dusk emergence, keep the phone still (a fence post, tripod, or windowsill helps), aim at open sky rather than trees or rooftops, and start counting just before activity begins.</div>
 </section>
 
 <section class="card">
@@ -456,7 +456,7 @@ function buildRecord(){
   lines.push('Automatic (motion-tracked) count: '+finalAutoCount.textContent);
   lines.push('Adjusted / confirmed count: '+finalAdjCount.textContent);
   lines.push('');
-  lines.push('Counting method: automatic motion tracking of moving shapes against the sky, using the on-device camera. This is an estimate of bats observed emerging, not a certified species count. The adjusted count reflects the observer\'s own correction of the automatic figure.');
+  lines.push('Counting method: automatic motion tracking of moving shapes against the sky, using the on-device camera, during the dawn return or dusk emergence. This is an estimate of bats observed, not a certified species count. The adjusted count reflects the observer\'s own correction of the automatic figure.');
   if(notes){lines.push('');lines.push('Observer notes:');lines.push(notes)}
   lines.push('');
   lines.push('This record remains the account and observation of the person who made it.');

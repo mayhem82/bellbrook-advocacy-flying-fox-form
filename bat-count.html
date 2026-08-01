@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Automatic camera-based fly-out counter for the Bellbrook flying-fox camp. Tracks bats as they fly overhead and builds a count record for the community evidence file.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦇</text></svg>">
+<title>Bellbrook Automatic Bat Fly-Out Counter</title>
+<style>
+:root{--g:#063d2e;--g2:#087a59;--y:#f5aa20;--bg:#f5f2eb;--ink:#1f1b16;--line:#ddd6ca;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;font-size:18px}
+.top{background:var(--g);color:white;padding:22px 18px}
+.wrap{max-width:940px;margin:auto;padding:0 18px}
+.top .wrap{padding:0}
+h1{margin:0;font-size:30px;line-height:1.1}
+h2{margin-top:0;font-size:26px;line-height:1.2}
+main{padding:24px 0 54px}
+.hero{background:#071f19;color:white;border-radius:26px;padding:30px 24px;text-align:center;margin-bottom:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;margin:0 0 20px}
+.card h3{font-size:20px;margin:18px 0 8px;color:var(--g)}
+.btn{display:inline-block;text-align:center;border:0;border-radius:16px;padding:14px 18px;font-weight:900;text-decoration:none;background:var(--g2);color:white;cursor:pointer;font-size:16px;margin:4px 6px 0 0}
+.btn.yellow{background:var(--y);color:#211400}
+.btn.muted{background:#6b5f50;color:white}
+.btn.danger{background:#9c3b2b;color:white}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.small{padding:10px 14px;font-size:14px}
+.stage{position:relative;background:#000;border-radius:18px;overflow:hidden;max-width:100%}
+.stage video,.stage canvas{display:block;width:100%;height:auto}
+.stage canvas{position:absolute;top:0;left:0}
+.count-overlay{position:absolute;top:12px;left:12px;background:rgba(0,0,0,.55);color:#fff;border-radius:14px;padding:8px 14px;font-weight:900;font-size:28px;line-height:1}
+.count-overlay small{display:block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#b8f3dd}
+.controls{margin-top:14px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0}
+.field{margin:12px 0}
+.field label{display:block;font-weight:800;font-size:14px;margin-bottom:5px}
+.field input[type=text],.field input[type=date],.field input[type=time],.field textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit}
+.field textarea{min-height:90px;resize:vertical}
+.stat{display:inline-block;background:#fff7df;border:1px solid #f2d28b;border-radius:14px;padding:10px 16px;margin:4px 8px 4px 0;font-weight:900}
+.stat span{display:block;font-size:12px;font-weight:700;color:#5d4510;text-transform:uppercase}
+.warn{background:#fff3cd;border:1px solid #f0d98c;border-radius:14px;padding:14px 16px;margin:14px 0}
+.hide{display:none}
+pre.record{white-space:pre-wrap;background:#faf8f2;border:1px solid var(--line);border-radius:14px;padding:16px;font-family:ui-monospace,Consolas,monospace;font-size:14px}
+.bottomnav{background:white;border:1px solid var(--line);border-radius:22px;padding:22px;margin:28px 0 6px}
+.bottomnav h2{font-size:22px;margin:0 0 10px}
+.foot{background:#1e1a17;color:#aaa;text-align:center;padding:28px 18px}
+.range-row{display:flex;align-items:center;gap:12px}
+.range-row input[type=range]{flex:1}
+@media(min-width:720px){.card{padding:30px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="btn muted" href="bellbrook-portal.html" style="margin-bottom:14px">← Bellbrook Community Resilience Portal</a><h1>AUTOMATIC BAT FLY-OUT COUNTER</h1><p>Point the camera at the sky above the camp and let the tracker count bats as they fly overhead, building an evidence record of colony activity.</p></div></header>
+<main class="wrap">
+
+<section class="hero"><h2>COUNT THE EMERGENCE</h2><p>This tool watches for moving shapes crossing the sky and counts each one automatically as a bat flies overhead. It works best at dusk, held steady, pointed at open sky above the camp.</p></section>
+
+<section class="card">
+<h2>How it works</h2>
+<p>This is a motion-tracking counter, not a species classifier. It compares each camera frame with the moments before it, looks for dark shapes moving against the sky, follows each shape for a few frames so the same bat is not counted twice, and adds one to the automatic count the first time a shape is confirmed as a genuine, sustained movement.</p>
+<p>Because it tracks movement rather than recognising bats specifically, it can occasionally miscount — for example if two bats pass close together, if a bird, insect, or leaf crosses the frame, or if the camera itself moves. Treat the automatic count as an <strong>estimate</strong>. Use the +1 / −1 buttons to correct it from what you actually saw before saving the record. The saved record keeps both figures, consistent with how this portal separates direct observation from automated estimate.</p>
+<div class="warn"><strong>Best results:</strong> keep the phone still (a fence post, tripod, or windowsill helps), aim at open sky rather than trees or rooftops, and start counting just before the bats begin emerging.</div>
+</section>
+
+<section class="card">
+<h2>1. Camera</h2>
+<div class="row">
+<button id="startCamBtn" class="btn">START CAMERA</button>
+<button id="stopCamBtn" class="btn muted hide">STOP CAMERA</button>
+<label class="btn small muted" for="videoFile" style="margin-top:4px">USE A RECORDED VIDEO INSTEAD</label>
+<input type="file" id="videoFile" accept="video/*" class="hide">
+</div>
+<p id="camError" class="warn hide"></p>
+
+<div class="stage hide" id="stage">
+<video id="video" playsinline muted></video>
+<canvas id="overlay"></canvas>
+<div class="count-overlay"><small>Automatic count</small><span id="liveCount">0</span></div>
+</div>
+
+<div class="controls hide" id="controls">
+<div class="row">
+<button id="startCountBtn" class="btn yellow">START COUNTING</button>
+<button id="pauseCountBtn" class="btn muted hide">PAUSE</button>
+<button id="resetBtn" class="btn muted">RESET COUNT</button>
+<button id="finishBtn" class="btn danger">FINISH SESSION</button>
+</div>
+<div class="field" style="max-width:360px">
+<label for="sensitivity">Detection sensitivity</label>
+<div class="range-row"><span>Low</span><input type="range" id="sensitivity" min="1" max="9" value="5"><span>High</span></div>
+</div>
+<div class="row">
+<span class="stat"><span>Elapsed</span><span id="elapsedStat">00:00</span></span>
+<span class="stat"><span>Automatic count</span><span id="countStat">0</span></span>
+</div>
+</div>
+</section>
+
+<section class="card hide" id="summaryCard">
+<h2>2. Session record</h2>
+<div class="row">
+<span class="stat"><span>Automatic count</span><span id="finalAutoCount">0</span></span>
+<span class="stat"><span>Adjusted count</span><span id="finalAdjCount">0</span></span>
+</div>
+<div class="row">
+<button id="adjMinus" class="btn small muted">−1</button>
+<button id="adjPlus" class="btn small muted">+1</button>
+<button id="adjReset" class="btn small muted">RESET TO AUTOMATIC</button>
+</div>
+<div class="field"><label for="fLocation">Location / vantage point</label><input type="text" id="fLocation" placeholder="e.g. Bellbrook Park, west fence line"></div>
+<div class="row">
+<div class="field" style="flex:1;min-width:150px"><label for="fDate">Date</label><input type="date" id="fDate"></div>
+<div class="field" style="flex:1;min-width:120px"><label for="fStart">Start time</label><input type="time" id="fStart"></div>
+<div class="field" style="flex:1;min-width:120px"><label for="fEnd">End time</label><input type="time" id="fEnd"></div>
+</div>
+<div class="field"><label for="fObserver">Observer name (optional)</label><input type="text" id="fObserver" placeholder="Optional"></div>
+<div class="field"><label for="fNotes">Notes (weather, direction of flight, anything unusual)</label><textarea id="fNotes"></textarea></div>
+<div class="row">
+<button id="genRecordBtn" class="btn yellow">GENERATE RECORD</button>
+</div>
+<div id="recordOutput" class="hide">
+<h3>Community fly-out count record</h3>
+<pre class="record" id="recordText"></pre>
+<div class="row">
+<button id="copyBtn" class="btn small">COPY TEXT</button>
+<button id="printBtn" class="btn small muted">PRINT</button>
+<button id="downloadBtn" class="btn small muted">DOWNLOAD .TXT</button>
+<button id="newSessionBtn" class="btn small muted">START A NEW COUNT</button>
+</div>
+</div>
+</section>
+
+<nav class="bottomnav" aria-label="Bottom navigation"><h2>Where to next?</h2><a class="btn yellow" href="flying-fox.html">Bellbrook Flying Fox Camp Record</a><a class="btn" href="methodology.html">How Community Records Work</a><a class="btn muted" href="bellbrook-portal.html">← Bellbrook Community Resilience Portal</a></nav>
+</main>
+<footer class="foot"><p>&copy; Bellbrook Community Resilience Portal</p><p>Kempsey Shire · Community Voice • 2026 Initiative</p></footer>
+
+<script>
+(function(){
+'use strict';
+
+var video=document.getElementById('video');
+var overlay=document.getElementById('overlay');
+var octx=overlay.getContext('2d');
+var stage=document.getElementById('stage');
+var controls=document.getElementById('controls');
+var liveCount=document.getElementById('liveCount');
+var countStat=document.getElementById('countStat');
+var elapsedStat=document.getElementById('elapsedStat');
+var camError=document.getElementById('camError');
+var sensitivityInput=document.getElementById('sensitivity');
+
+var startCamBtn=document.getElementById('startCamBtn');
+var stopCamBtn=document.getElementById('stopCamBtn');
+var videoFile=document.getElementById('videoFile');
+var startCountBtn=document.getElementById('startCountBtn');
+var pauseCountBtn=document.getElementById('pauseCountBtn');
+var resetBtn=document.getElementById('resetBtn');
+var finishBtn=document.getElementById('finishBtn');
+
+var stream=null;
+var proc=document.createElement('canvas');
+var PW=128,PH=96;
+proc.width=PW;proc.height=PH;
+var pctx=proc.getContext('2d',{willReadFrequently:true});
+
+var background=null;
+var PN=PW*PH;
+var grayBuf=new Float32Array(PN);
+var maskBuf=new Uint8Array(PN);
+var visitedBuf=new Uint8Array(PN);
+var stackBuf=new Int32Array(PN);
+var tracks=[];
+var nextTrackId=1;
+var frameIndex=0;
+var totalCount=0;
+var counting=false;
+var rafId=null;
+var startedAt=null;
+var elapsedTimer=null;
+
+function showEl(el){el.classList.remove('hide')}
+function hideEl(el){el.classList.add('hide')}
+
+function fail(msg){
+  camError.textContent=msg;
+  showEl(camError);
+}
+
+function fitOverlay(){
+  overlay.width=video.videoWidth||640;
+  overlay.height=video.videoHeight||480;
+}
+
+async function startCamera(){
+  hideEl(camError);
+  try{
+    stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'}},audio:false});
+    video.srcObject=stream;
+    await video.play();
+    fitOverlay();
+    showEl(stage);showEl(controls);
+    hideEl(startCamBtn);showEl(stopCamBtn);
+  }catch(e){
+    fail('Could not access the camera (' + (e && e.message ? e.message : 'permission denied') + '). You can use "Use a recorded video instead" below.');
+  }
+}
+
+function stopCamera(){
+  if(stream){stream.getTracks().forEach(function(t){t.stop()});stream=null}
+  video.srcObject=null;
+  stopCounting();
+  hideEl(stage);hideEl(controls);
+  showEl(startCamBtn);hideEl(stopCamBtn);
+}
+
+videoFile.addEventListener('change',function(){
+  var f=videoFile.files && videoFile.files[0];
+  if(!f)return;
+  if(stream){stream.getTracks().forEach(function(t){t.stop()});stream=null}
+  video.srcObject=null;
+  video.src=URL.createObjectURL(f);
+  video.loop=true;
+  video.play().then(function(){
+    fitOverlay();
+    showEl(stage);showEl(controls);
+    hideEl(startCamBtn);showEl(stopCamBtn);
+  }).catch(function(e){fail('Could not play that video file (' + e.message + ').')});
+});
+
+startCamBtn.addEventListener('click',startCamera);
+stopCamBtn.addEventListener('click',stopCamera);
+
+function dist(ax,ay,bx,by){var dx=ax-bx,dy=ay-by;return Math.sqrt(dx*dx+dy*dy)}
+
+function processFrame(){
+  pctx.drawImage(video,0,0,PW,PH);
+  var frame=pctx.getImageData(0,0,PW,PH);
+  var data=frame.data;
+  var n=PN;
+  var gray=grayBuf;
+  for(var i=0,p=0;i<n;i++,p+=4){
+    gray[i]=0.299*data[p]+0.587*data[p+1]+0.114*data[p+2];
+  }
+
+  if(!background){
+    background=gray.slice();
+  }
+
+  var sens=parseInt(sensitivityInput.value,10);
+  var threshold=90-sens*7;
+  var minArea=Math.max(2,10-sens);
+
+  var mask=maskBuf;
+  mask.fill(0);
+  for(var j=0;j<n;j++){
+    var d=Math.abs(gray[j]-background[j]);
+    if(d>threshold)mask[j]=1;
+  }
+
+  var visited=visitedBuf;
+  visited.fill(0);
+  var blobs=[];
+  var stack=stackBuf;
+  for(var s=0;s<n;s++){
+    if(mask[s] && !visited[s]){
+      var sp=0;stack[sp++]=s;visited[s]=1;
+      var minx=PW,maxx=0,miny=PH,maxy=0,area=0;
+      while(sp>0){
+        var idx=stack[--sp];
+        var x=idx%PW, y=(idx/PW)|0;
+        area++;
+        if(x<minx)minx=x;if(x>maxx)maxx=x;
+        if(y<miny)miny=y;if(y>maxy)maxy=y;
+        var nb=[idx-1,idx+1,idx-PW,idx+PW];
+        for(var k=0;k<4;k++){
+          var ni=nb[k];
+          if(ni<0||ni>=n)continue;
+          if(k<2 && ((idx%PW)===0 || (idx%PW)===PW-1) && ((ni%PW)===PW-1||(ni%PW)===0) )continue;
+          if(mask[ni] && !visited[ni]){visited[ni]=1;stack[sp++]=ni}
+        }
+      }
+      if(area>=minArea && area<=n*0.15){
+        blobs.push({cx:(minx+maxx)/2,cy:(miny+maxy)/2,minx:minx,miny:miny,maxx:maxx,maxy:maxy,area:area});
+      }
+    }
+  }
+
+  var maxMatchDist=PW*0.18;
+  var used=new Array(blobs.length);
+  tracks.forEach(function(t){t.matched=false});
+  blobs.forEach(function(b,bi){
+    var best=null,bestD=maxMatchDist;
+    tracks.forEach(function(t){
+      if(t.matched)return;
+      var d=dist(t.cx,t.cy,b.cx,b.cy);
+      if(d<bestD){bestD=d;best=t}
+    });
+    if(best){
+      best.cx=b.cx;best.cy=b.cy;best.box=b;
+      best.age++;best.missed=0;best.matched=true;best.lastFrame=frameIndex;
+    }else{
+      tracks.push({id:nextTrackId++,cx:b.cx,cy:b.cy,box:b,age:1,missed:0,matched:true,counted:false,lastFrame:frameIndex});
+    }
+  });
+  tracks.forEach(function(t){
+    if(!t.matched){t.missed++}
+  });
+  tracks=tracks.filter(function(t){return t.missed<=6});
+
+  var ageThreshold=3;
+  tracks.forEach(function(t){
+    if(!t.counted && t.age>=ageThreshold && t.missed===0){
+      t.counted=true;
+      totalCount++;
+    }
+  });
+
+  var alpha=0.03;
+  for(var g=0;g<n;g++){
+    if(!mask[g])background[g]=background[g]*(1-alpha)+gray[g]*alpha;
+  }
+
+  drawOverlay();
+  liveCount.textContent=totalCount;
+  countStat.textContent=totalCount;
+  frameIndex++;
+}
+
+function drawOverlay(){
+  octx.clearRect(0,0,overlay.width,overlay.height);
+  var sx=overlay.width/PW, sy=overlay.height/PH;
+  octx.lineWidth=2;
+  octx.strokeStyle='#f5aa20';
+  octx.fillStyle='#f5aa20';
+  octx.font='bold 14px system-ui,sans-serif';
+  tracks.forEach(function(t){
+    if(!t.box || t.missed>0)return;
+    var w=(t.box.maxx-t.box.minx+1)*sx, h=(t.box.maxy-t.box.miny+1)*sy;
+    var x=t.box.minx*sx, y=t.box.miny*sy;
+    octx.strokeRect(x,y,Math.max(w,6),Math.max(h,6));
+    if(t.counted)octx.fillText('#'+t.id,x,Math.max(12,y-4));
+  });
+}
+
+function loop(){
+  if(!counting)return;
+  if(video.readyState>=2){processFrame()}
+  rafId=requestAnimationFrame(loop);
+}
+
+function startCounting(){
+  if(counting)return;
+  counting=true;
+  background=null;
+  startedAt=startedAt||new Date();
+  document.getElementById('fStart').value=document.getElementById('fStart').value||toTimeInput(startedAt);
+  document.getElementById('fDate').value=document.getElementById('fDate').value||toDateInput(startedAt);
+  showEl(pauseCountBtn);hideEl(startCountBtn);
+  elapsedTimer=elapsedTimer||setInterval(updateElapsed,1000);
+  loop();
+}
+
+function pauseCounting(){
+  counting=false;
+  if(rafId)cancelAnimationFrame(rafId);
+  hideEl(pauseCountBtn);showEl(startCountBtn);
+}
+
+function stopCounting(){
+  counting=false;
+  if(rafId)cancelAnimationFrame(rafId);
+  if(elapsedTimer){clearInterval(elapsedTimer);elapsedTimer=null}
+}
+
+function updateElapsed(){
+  if(!startedAt)return;
+  var secs=Math.floor((Date.now()-startedAt.getTime())/1000);
+  var m=Math.floor(secs/60),s=secs%60;
+  elapsedStat.textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+}
+
+startCountBtn.addEventListener('click',startCounting);
+pauseCountBtn.addEventListener('click',pauseCounting);
+
+resetBtn.addEventListener('click',function(){
+  totalCount=0;tracks=[];background=null;frameIndex=0;
+  liveCount.textContent='0';countStat.textContent='0';
+  elapsedStat.textContent='00:00';
+  startedAt=counting?new Date():null;
+});
+
+function toTimeInput(d){
+  var h=d.getHours(),m=d.getMinutes();
+  return (h<10?'0':'')+h+':'+(m<10?'0':'')+m;
+}
+function toDateInput(d){
+  var y=d.getFullYear(),m=d.getMonth()+1,day=d.getDate();
+  return y+'-'+(m<10?'0':'')+m+'-'+(day<10?'0':'')+day;
+}
+
+var summaryCard=document.getElementById('summaryCard');
+var finalAutoCount=document.getElementById('finalAutoCount');
+var finalAdjCount=document.getElementById('finalAdjCount');
+var adjustedCount=0;
+
+finishBtn.addEventListener('click',function(){
+  stopCounting();
+  var endTime=new Date();
+  document.getElementById('fEnd').value=toTimeInput(endTime);
+  adjustedCount=totalCount;
+  finalAutoCount.textContent=totalCount;
+  finalAdjCount.textContent=adjustedCount;
+  showEl(summaryCard);
+  summaryCard.scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+document.getElementById('adjPlus').addEventListener('click',function(){
+  adjustedCount++;finalAdjCount.textContent=adjustedCount;
+});
+document.getElementById('adjMinus').addEventListener('click',function(){
+  adjustedCount=Math.max(0,adjustedCount-1);finalAdjCount.textContent=adjustedCount;
+});
+document.getElementById('adjReset').addEventListener('click',function(){
+  adjustedCount=totalCount;finalAdjCount.textContent=adjustedCount;
+});
+
+function durationText(){
+  var s=document.getElementById('fStart').value, e=document.getElementById('fEnd').value;
+  if(!s||!e)return '';
+  var sp=s.split(':'),ep=e.split(':');
+  var smin=(+sp[0])*60+(+sp[1]), emin=(+ep[0])*60+(+ep[1]);
+  var diff=emin-smin; if(diff<0)diff+=24*60;
+  var h=Math.floor(diff/60),m=diff%60;
+  return (h?h+'h ':'')+m+'m';
+}
+
+function buildRecord(){
+  var loc=document.getElementById('fLocation').value.trim()||'(not recorded)';
+  var date=document.getElementById('fDate').value||'(not recorded)';
+  var start=document.getElementById('fStart').value||'(not recorded)';
+  var end=document.getElementById('fEnd').value||'(not recorded)';
+  var observer=document.getElementById('fObserver').value.trim();
+  var notes=document.getElementById('fNotes').value.trim();
+  var dur=durationText();
+  var lines=[];
+  lines.push('BELLBROOK FLY-OUT COUNT RECORD');
+  lines.push('Prepared using Bellbrook Automatic Bat Fly-Out Counter');
+  lines.push('');
+  lines.push('Date: '+date);
+  lines.push('Location / vantage point: '+loc);
+  lines.push('Start time: '+start);
+  lines.push('End time: '+end);
+  if(dur)lines.push('Duration: '+dur);
+  if(observer)lines.push('Observer: '+observer);
+  lines.push('');
+  lines.push('Automatic (motion-tracked) count: '+finalAutoCount.textContent);
+  lines.push('Adjusted / confirmed count: '+finalAdjCount.textContent);
+  lines.push('');
+  lines.push('Counting method: automatic motion tracking of moving shapes against the sky, using the on-device camera. This is an estimate of bats observed emerging, not a certified species count. The adjusted count reflects the observer\'s own correction of the automatic figure.');
+  if(notes){lines.push('');lines.push('Observer notes:');lines.push(notes)}
+  lines.push('');
+  lines.push('This record remains the account and observation of the person who made it.');
+  return lines.join('\n');
+}
+
+document.getElementById('genRecordBtn').addEventListener('click',function(){
+  var text=buildRecord();
+  document.getElementById('recordText').textContent=text;
+  showEl(document.getElementById('recordOutput'));
+});
+
+document.getElementById('copyBtn').addEventListener('click',function(){
+  var text=document.getElementById('recordText').textContent;
+  navigator.clipboard && navigator.clipboard.writeText(text);
+});
+
+document.getElementById('printBtn').addEventListener('click',function(){
+  var w=window.open('','_blank');
+  w.document.write('<pre style="white-space:pre-wrap;font-family:ui-monospace,Consolas,monospace">'+document.getElementById('recordText').textContent.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</pre>');
+  w.document.close();w.print();
+});
+
+document.getElementById('downloadBtn').addEventListener('click',function(){
+  var text=document.getElementById('recordText').textContent;
+  var blob=new Blob([text],{type:'text/plain'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  var date=document.getElementById('fDate').value||'record';
+  a.href=url;a.download='bellbrook-flyout-count-'+date+'.txt';
+  document.body.appendChild(a);a.click();document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});
+
+document.getElementById('newSessionBtn').addEventListener('click',function(){
+  totalCount=0;tracks=[];background=null;frameIndex=0;startedAt=null;
+  liveCount.textContent='0';countStat.textContent='0';elapsedStat.textContent='00:00';
+  hideEl(document.getElementById('recordOutput'));
+  hideEl(summaryCard);
+  ['fLocation','fObserver','fNotes'].forEach(function(id){document.getElementById(id).value=''});
+  document.getElementById('fStart').value='';
+  document.getElementById('fEnd').value='';
+  showEl(startCountBtn);hideEl(pauseCountBtn);
+});
+
+})();
+</script>
+</body>
+</html>

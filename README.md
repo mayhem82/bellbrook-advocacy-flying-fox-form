@@ -18,6 +18,17 @@ Standalone GitHub Pages form for collecting Bellbrook flying-fox community impac
 
 This is intentional for the first public version: people can complete the form, export or print the record, then hand it in or send it through a separate channel.
 
+## Automatic Bat Fly-Out Counter
+
+`bat-count.html` is a standalone camera-based tool for counting flying-foxes as they fly overhead during the evening emergence.
+
+- Uses the device camera (or an uploaded video) and a lightweight in-browser motion tracker to detect and count moving shapes crossing the sky
+- Runs entirely client-side — no video or images leave the device
+- Reports an automatic count plus an observer-adjusted count, since motion tracking is an estimate rather than a verified species count
+- Generates a dated fly-out count record that can be copied, printed, or downloaded as `.txt`, in the same spirit as the community impact record
+
+This is a motion/blob tracker, not a trained bat-recognition model — see the in-page "How it works" notes for its limitations.
+
 ## SEE Rollout Roadmap
 
 The Bellbrook Advocacy Portal is the first operational deployment and validation environment for MAYHEM SEE — the Spatial Evidence Engine.

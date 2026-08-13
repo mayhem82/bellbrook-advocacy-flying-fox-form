@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Both Bellbrook portal theme songs in one place, with looped playback and a live audio visualizer.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+<title>Theme Songs — Bellbrook Community Resilience Portal</title>
+<style>
+body{margin:0;background:#f5f2eb;color:#1f1b16;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;font-size:18px}.top{background:#063d2e;color:white;padding:28px 18px}.wrap{max-width:940px;margin:auto;padding:22px 18px}.card{background:white;border:1px solid #ddd6ca;border-radius:22px;padding:26px;margin:0 0 20px;text-align:center}.btn{display:inline-block;text-align:center;border-radius:16px;padding:10px 16px;font-weight:900;text-decoration:none;background:#087a59;color:white}.foot{background:#1e1a17;color:#aaa;text-align:center;padding:28px 18px}h1{margin:0;font-size:32px;line-height:1.1}.credit{margin:0 0 10px;font-size:14px;color:#5a5147}.notice{margin:10px 0 0;font-size:14px;color:#5a5147}.hide{display:none}.loopRow{margin:0 0 10px;font-size:15px}.viz{display:block;width:100%;height:56px;margin-top:10px;border-radius:12px;background:#1c1917}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="btn" href="bellbrook-portal.html" style="background:#0a5240">← Bellbrook Portal</a><h1 style="margin-top:14px">Theme Songs</h1><p>Both songs from the Bellbrook Community Resilience Portal, looped, with a live audio visualizer.</p></div></header>
+<main class="wrap">
+
+<article class="card">
+<p style="margin:0 0 10px;font-weight:900">🎵 "Light Against the Grey" — the portal's theme</p>
+<p class="credit">Lyrics by a Bellbrook resident, composed with Suno.</p>
+<audio id="song1" controls loop preload="auto" style="width:100%" src="light-against-the-grey.mp3">Your browser does not support the audio element. <a href="light-against-the-grey.mp3">Download the song</a>.</audio>
+<canvas id="viz1" class="viz"></canvas>
+<label class="loopRow"><input type="checkbox" id="loop1" checked> Loop</label>
+</article>
+
+<article class="card">
+<p style="margin:0 0 10px;font-weight:900">🎵 "The Hanging Question" — the flying-fox issue's theme</p>
+<p class="credit">Lyrics by a Bellbrook resident, composed with Suno.</p>
+<audio id="song2" controls loop preload="auto" style="width:100%" src="the-hanging-question.mp3">Your browser does not support the audio element. <a href="the-hanging-question.mp3">Download the song</a>.</audio>
+<canvas id="viz2" class="viz"></canvas>
+<label class="loopRow"><input type="checkbox" id="loop2" checked> Loop</label>
+</article>
+
+</main>
+<footer class="foot"><p>&copy; NSW Community Resilience Portals</p><p>Community Voice • 2026 Initiative</p></footer>
+
+<script>(function(){
+function attachVisualizer(audio, canvas, barColor){
+  var ctx=canvas.getContext('2d');
+  var audioCtx,analyser,dataArray;
+  function sizeCanvas(){var r=canvas.getBoundingClientRect();canvas.width=Math.max(1,Math.round(r.width));canvas.height=Math.max(1,Math.round(r.height));}
+  function setup(){
+    if(audioCtx)return;
+    try{
+      audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+      var source=audioCtx.createMediaElementSource(audio);
+      analyser=audioCtx.createAnalyser();
+      analyser.fftSize=128;
+      dataArray=new Uint8Array(analyser.frequencyBinCount);
+      source.connect(analyser);
+      analyser.connect(audioCtx.destination);
+    }catch(e){}
+  }
+  function draw(){
+    requestAnimationFrame(draw);
+    var w=canvas.width,h=canvas.height;
+    ctx.clearRect(0,0,w,h);
+    if(!analyser||audio.paused){
+      ctx.fillStyle='#3a3530';
+      var idleBars=32,gap=2,bw=(w-gap*(idleBars-1))/idleBars;
+      for(var j=0;j<idleBars;j++){ctx.fillRect(j*(bw+gap),h-3,bw,3);}
+      return;
+    }
+    analyser.getByteFrequencyData(dataArray);
+    var gap2=2,bw2=(w-gap2*(dataArray.length-1))/dataArray.length;
+    for(var i=0;i<dataArray.length;i++){
+      var v=dataArray[i]/255,bh=Math.max(3,v*h);
+      ctx.fillStyle=barColor;
+      ctx.fillRect(i*(bw2+gap2),h-bh,bw2,bh);
+    }
+  }
+  window.addEventListener('resize',sizeCanvas);
+  audio.addEventListener('play',function(){setup();if(audioCtx&&audioCtx.state==='suspended')audioCtx.resume();});
+  sizeCanvas();
+  draw();
+}
+attachVisualizer(document.getElementById('song1'),document.getElementById('viz1'),'#087a59');
+attachVisualizer(document.getElementById('song2'),document.getElementById('viz2'),'#f5aa20');
+
+['1','2'].forEach(function(n){
+  var audio=document.getElementById('song'+n);
+  var loop=document.getElementById('loop'+n);
+  loop.addEventListener('change',function(){audio.loop=loop.checked;});
+});
+})();</script>
+</body>
+</html>

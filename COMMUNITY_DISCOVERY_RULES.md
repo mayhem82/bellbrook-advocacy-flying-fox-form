@@ -74,7 +74,7 @@ Long forms belong in dedicated issue sections after promotion.
 
 ## Email archive receipt explanation
 
-The Bellbrook Advocacy Portal does not store a Community Record by itself.
+The Bellbrook Community Access and Participation Portal does not store a Community Record by itself.
 
 When a resident generates a Community Record, it exists only on their device until they choose what to do with it.
 

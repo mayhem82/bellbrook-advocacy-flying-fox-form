@@ -1,7 +1,7 @@
 {
   "engineName": "Community Evidence Portal Engine",
   "projectKey": "bellbrook-flying-fox",
-  "portalTitle": "BELLBROOK ADVOCACY PORTAL",
+  "portalTitle": "Bellbrook Community Access and Participation Portal",
   "portalSubtitle": "Community Voice • 2026 Initiative",
   "issueName": "Bellbrook Flying Fox Colony",
   "locationName": "Bellbrook",
@@ -15,7 +15,7 @@
   "record": {
     "title": "BELLBROOK COMMUNITY IMPACT RECORD",
     "ownershipLine": "The contents remain the account and observations of the resident.",
-    "preparedUsing": "Bellbrook Advocacy Portal"
+    "preparedUsing": "Bellbrook Community Access and Participation Portal"
   },
   "recipientTypes": [
     "Council / General Manager",

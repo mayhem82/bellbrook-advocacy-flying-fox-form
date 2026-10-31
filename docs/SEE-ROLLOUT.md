@@ -1,15 +1,15 @@
 # MAYHEM Spatial Evidence Engine Rollout
 
-**Project:** Bellbrook Advocacy Portal  
+**Project:** Bellbrook Community Access and Participation Portal  
 **Engine:** SEE — Spatial Evidence Engine  
 **Status:** Rollout Roadmap  
-**First Deployment:** Bellbrook Advocacy Portal  
+**First Deployment:** Bellbrook Community Access and Participation Portal  
 
 ---
 
 ## 1. Purpose
 
-This rollout plan defines how the MAYHEM Spatial Evidence Engine (SEE) will be introduced into the Bellbrook Advocacy Portal.
+This rollout plan defines how the MAYHEM Spatial Evidence Engine (SEE) will be introduced into the Bellbrook Community Access and Participation Portal.
 
 Bellbrook is the first operational deployment and validation environment for SEE. The portal is not a throwaway prototype. It is the live pilot used to prove a reusable rural and remote community investigation framework.
 
@@ -258,7 +258,7 @@ This caused that.
 
 ## 6. Bellbrook Pilot Success Criteria
 
-The Bellbrook Advocacy Portal validates SEE if it demonstrates:
+The Bellbrook Community Access and Participation Portal validates SEE if it demonstrates:
 
 - Repeatable spatial evidence collection.
 - GPS-linked community observations.

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Transform the Bellbrook Advocacy Portal from a submission generator into a community memory system.
+Transform the Bellbrook Community Access and Participation Portal from a submission generator into a community memory system.
 
 The Response Register captures what happened after a package was sent.
 

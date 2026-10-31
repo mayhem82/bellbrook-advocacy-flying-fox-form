@@ -1,4 +1,4 @@
-# Bellbrook Advocacy Portal structure notes
+# Bellbrook Community Access and Participation Portal structure notes
 
 Public portal rule:
 

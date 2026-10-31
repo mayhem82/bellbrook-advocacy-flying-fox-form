@@ -20,7 +20,7 @@ This is intentional for the first public version: people can complete the form, 
 
 ## SEE Rollout Roadmap
 
-The Bellbrook Advocacy Portal is the first operational deployment and validation environment for MAYHEM SEE — the Spatial Evidence Engine.
+The Bellbrook Community Access and Participation Portal is the first operational deployment and validation environment for MAYHEM SEE — the Spatial Evidence Engine.
 
 SEE moves the project from form-first reporting toward location-first investigation. It will allow Bellbrook issues to be linked to points, lines, polygons, ground photographs, historical imagery, Street View, Earth observation and community evidence.
 

@@ -1,4 +1,4 @@
-# Bellbrook Advocacy Portal — Response Register and Community Memory Specification
+# Bellbrook Community Access and Participation Portal — Response Register and Community Memory Specification
 
 ## Purpose
 

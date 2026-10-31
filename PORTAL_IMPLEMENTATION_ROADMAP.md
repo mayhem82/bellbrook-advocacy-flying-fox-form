@@ -1,4 +1,4 @@
-# Bellbrook Advocacy Portal Implementation Roadmap
+# Bellbrook Community Access and Participation Portal Implementation Roadmap
 
 ## Vision
 

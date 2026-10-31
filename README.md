@@ -1,6 +1,6 @@
-# Bellbrook Flying-Fox Community Impact Form
+# NSW Community Access and Participation Portal
 
-Standalone GitHub Pages form for collecting Bellbrook flying-fox community impact records.
+Static GitHub Pages site helping residents across NSW shires document local issues and prepare community records. Includes the Bellbrook flying-fox community impact form.
 
 ## What it does
 
